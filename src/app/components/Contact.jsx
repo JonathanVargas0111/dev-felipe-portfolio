@@ -5,14 +5,16 @@ const Contact = () => {
     <section 
       id="section-contact"
       name="section-contac"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-gray-400 md:h-screen"
+      
+      className="w-full md:h-screen bg-gradient-to-b from-black to-gray-800 "
     >
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
+      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full text-gray-400">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Cotact
+          <p className="text-4xl font-bold  ">
+            Contact
           </p>
-          <p className="py-6">Submit the form below to get in touch with me</p>
+          <p>En construccion</p>
+          {/* <p className="py-6">Submit the form below to get in touch with me</p> */}
         </div>
 
         <div className=" flex justify-center items-center">

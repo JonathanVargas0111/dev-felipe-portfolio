@@ -4,8 +4,7 @@ const Contact = () => {
   return (
     <section 
       id="section-contact"
-      name="section-contac"
-      
+      name="section-contac"      
       className="w-full md:h-screen bg-gradient-to-b from-black to-gray-800 "
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full text-gray-400">
@@ -13,16 +12,15 @@ const Contact = () => {
           <p className="text-4xl font-bold  ">
             Contact
           </p>
-          <p>En construccion</p>
-          {/* <p className="py-6">Submit the form below to get in touch with me</p> */}
+          <p className="text-red-500">En construccion</p>  
         </div>
-
         <div className=" flex justify-center items-center">
           <form
-            action="https://getform.io/f/61c99527-2b15-42cf-9b55-ad37d2f7daa6"
+            action="https://getform.io/f/43177f3f-d4f6-4d92-b761-d113f4fe4685"
             method="POST"
             className=" flex flex-col w-full md:w-1/2"
           >
+            <p className="py-6 m-auto text-2xl">Cuéntame de esa idea que quieres hacer realidad:</p>
             <input
               type="text"
               name="name"
@@ -41,9 +39,8 @@ const Contact = () => {
               rows="10"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></textarea>
-
             <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-              Let's talk
+              Send
             </button>
           </form>
         </div>

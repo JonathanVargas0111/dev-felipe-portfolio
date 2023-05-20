@@ -2,6 +2,9 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import React from "react";
 import * as Yup from 'yup';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Contact = () => {
   const msReque = 'Campo requerido';
@@ -24,13 +27,14 @@ const Contact = () => {
       if (response.ok) {
         // La solicitud se realizó correctamente
         resetForm();
-        console.log("¡Datos enviados correctamente!");
+        toast.success("Formulario enviado correctamente");
       } else {
         // Ocurrió un error al enviar la solicitud
-        console.error("Error al enviar los datos");
+        toast.error("Error al enviar el formulario");
       }
     } catch (error) {
       console.error("Error en la solicitud:", error);
+      toast.error("Error al enviar el formulario");
     }
 
     setSubmitting(false);
@@ -42,6 +46,7 @@ const Contact = () => {
       name="section-contac"
       className="w-full md:h-screen bg-gradient-to-b from-black to-gray-800"
     >
+      <ToastContainer />
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full text-gray-400">
         <div className="pb-8">
           <h3 className="text-4xl font-bold">

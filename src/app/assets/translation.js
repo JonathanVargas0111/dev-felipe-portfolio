@@ -2,24 +2,24 @@ const linksEn = [
   {
     id: 1,
     idSection: "home",
-    titleBtn:"home"
+    titleBtn: "home"
   },
   {
     id: 2,
     idSection: "about",
-    titleBtn:"about"
+    titleBtn: "about"
 
   },
   {
     id: 3,
     idSection: "portfolio",
-    titleBtn:"portfolio"
+    titleBtn: "portfolio"
 
   },
   {
     id: 4,
     idSection: "skills",
-    titleBtn:"skills"
+    titleBtn: "skills"
   },
   /* {
     id: 5,
@@ -29,7 +29,7 @@ const linksEn = [
   {
     id: 6,
     idSection: "contact",
-    titleBtn:"contact"
+    titleBtn: "contact"
   },
 ]
 
@@ -37,22 +37,22 @@ const linksEs = [
   {
     id: 1,
     idSection: "home",
-    titleBtn:"inicio"
+    titleBtn: "inicio"
   },
   {
     id: 2,
     idSection: "about",
-    titleBtn:"sobre mi"
+    titleBtn: "sobre mi"
   },
   {
     id: 3,
     idSection: "portfolio",
-    titleBtn:"portafolio"
+    titleBtn: "portafolio"
   },
   {
     id: 4,
     idSection: "skills",
-    titleBtn:"skills"
+    titleBtn: "skills"
   },
   /* {
     id: 5,
@@ -62,8 +62,32 @@ const linksEs = [
   {
     id: 6,
     idSection: "contact",
-    titleBtn:"contacto"
+    titleBtn: "contacto"
   },
+]
+
+export const linksProjects = [
+  {
+    id: 1,
+    title: "Retos Front end Mentor",
+    images:["https://github.com/JonathanVargas0111/card-ntf/blob/main/design/desktop-preview.jpg?raw=true"],
+    linkDisplayed: "https://jonathanvargas0111.github.io/retos-frontend-mentor/",
+    linkRepo: "https://github.com/JonathanVargas0111/retos-frontend-mentor"
+  },
+  {
+    id: "2",
+    title: "Taller SASS js",
+    images:["https://jonathanvargas0111.github.io/sass_js_distrital/resources/img/imgPage2.PNG"],
+    linkDisplayed:"https://jonathanvargas0111.github.io/sass_js_distrital/",
+    linkRepo: "https://github.com/JonathanVargas0111/sass_js_distrital"
+  },
+  {
+    id: "3",
+    title: "Registro de informacion",
+    images:["https://appatico.com/wp-content/uploads/2022/05/formularios-con-react-formik-yup.png"],
+    linkDisplayed:"https://taller-react-jonathanvargas.vercel.app/",
+    linkRepo: "https://github.com/JonathanVargas0111/taller_react_pasos"
+  }
 ]
 
 export const translation = {
@@ -78,7 +102,7 @@ export const translation = {
       ]
     }
   },
-  en: {   
+  en: {
     links: linksEn,
     about: {
       title: "About",

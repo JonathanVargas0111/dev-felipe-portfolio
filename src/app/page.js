@@ -3,8 +3,9 @@ import Header from './components/Header'
 import SocialLinks from './components/SocialLinks'
 import About from './components/About'
 import Skills from './components/Skills'
-import Contact from './components/Contact'
+import Contact from './components/ContactUseFormik'
 import Portfolio from './components/Portfolio'
+
 
 export default function Home() {
   return (

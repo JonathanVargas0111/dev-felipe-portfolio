@@ -24,25 +24,23 @@ const Portfolio = () => {
           <h2 className="text-4xl font-bold" >
             Portfolio
           </h2>
-          <p>
-            En construccion
-          </p>
-
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {dataProjects.map((project) => (
-            
+          {dataProjects.map((project) => (            
             <div key={project.id} className="shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-500 ">
               <div
                 key={project.id}
                 className={'shadow-md py-2 rounded-lg justify-center'}
               >
+                <div className="h-48">
                 <Image
                   src={project.images[0]}
                   width={500}
                   height={300}
                   className="w-full h-full object-cover"
-                />
+                  alt="imgagen de project"
+                  />
+                  </div>
                 <p className="mt-4  text-center">{project.title}</p>
               </div>
               <div className="flex items-center justify-center">

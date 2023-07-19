@@ -6,12 +6,6 @@ import Image from 'next/image';
 
 
 const Portfolio = () => {
-  const portfolios = [{
-    id: 1
-  }, {
-    id: 2
-  }];
-
   const [dataProjects, setDataProjects] = useState(linksProjects);
   return (
     <section
@@ -25,31 +19,31 @@ const Portfolio = () => {
             Portfolio
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {dataProjects.map((project) => (            
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 md:px-12 sm:px-0">
+          {dataProjects.map((project) => (
             <div key={project.id} className="shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-500 ">
               <div
                 key={project.id}
                 className={'shadow-md py-2 rounded-lg justify-center'}
               >
                 <div className="h-48">
-                <Image
-                  src={project.images[0]}
-                  width={500}
-                  height={300}
-                  className="w-full h-full object-cover"
-                  alt="imgagen de project"
+                  <Image
+                    src={project.images[0]}
+                    width={500}
+                    height={250}
+                    className="w-full h-full object-cover"
+                    alt="imgagen de project"
                   />
-                  </div>
+                </div>
                 <p className="mt-4  text-center">{project.title}</p>
               </div>
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <button className="w-1/2 px-6 py-2 m-2 duration-200 hover:scale-105">
                   <Link href={project.linkDisplayed} target="_blank">
                     Demo
                   </Link>
                 </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <button className="w-1/2 px-6 py-2 m-2 duration-200 hover:scale-105">
                   <Link href={project.linkRepo} target="_blank">
                     Code
                   </Link>

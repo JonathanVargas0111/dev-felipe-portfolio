@@ -87,6 +87,13 @@ export const linksProjects = [
     images:["https://appatico.com/wp-content/uploads/2022/05/formularios-con-react-formik-yup.png"],
     linkDisplayed:"https://taller-react-jonathanvargas.vercel.app/",
     linkRepo: "https://github.com/JonathanVargas0111/taller_react_pasos"
+  },
+  {
+    id: "4",
+    title: "DigitalArt",
+    images:["/img/portfolio/imgDigitalArt.png"],
+    linkDisplayed:"https://agencia-digital-eight.vercel.app/",
+    linkRepo: "https://github.com/JonathanVargas0111/agencia-digital"
   }
 ]
 

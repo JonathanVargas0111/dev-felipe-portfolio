@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Link from 'next/link'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
-import { setLang} from "../store/slices/settings/SettingsSlices";
+import { setLang } from "../store/slices/settings/SettingsSlices";
 import { translation } from "../assets/translation";
 
 const NavBar = () => {
@@ -16,7 +16,7 @@ const NavBar = () => {
 
 
   const changeLanguage = () => {
-    lang === "es" ? dispatch(setLang("en")) : dispatch(setLang("es")); 
+    lang === "es" ? dispatch(setLang("en")) : dispatch(setLang("es"));
     setLiks(translation[lang].links)
   }
 
@@ -26,7 +26,7 @@ const NavBar = () => {
         <h1 className="text-3xl md:text-4xl font-signature ml-2">Jonathan Vargas</h1>
       </div>
       <ul className="hidden md:flex">
-        {links.map(({ id,idSection, titleBtn }) => (
+        {links.map(({ id, idSection, titleBtn }) => (
           <li
             key={id}
             className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 ">
@@ -35,6 +35,12 @@ const NavBar = () => {
             </Link>
           </li>
         ))}
+        <li
+          className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 ">
+          <Link href={`https://medium.com/@jonathanvargas_61788`} className='transition duration-500' target="_blank">
+            <button className='m-5 capitalize transition duration-500'>{"Blog"}</button>
+          </Link>
+        </li>
         {/* <li>
           <button 
           onClick={changeLanguage}
@@ -52,7 +58,7 @@ const NavBar = () => {
       </div>
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-          {links.map(({ id,idSection, titleBtn }) => (
+          {links.map(({ id, idSection, titleBtn }) => (
             <li
               key={id}
               className="px-4 cursor-pointer capitalize py-6 text-4xl"
@@ -60,6 +66,12 @@ const NavBar = () => {
               <Link href={`/#section-${idSection}`}><button className='m-5 capitalize' onClick={() => setNav(!nav)}>{titleBtn}</button></Link>
             </li>
           ))}
+          <li
+            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 ">
+            <Link href={`https://medium.com/@jonathanvargas_61788`} className='transition duration-500' target="_blank">
+              <button className='m-5 capitalize transition duration-500'>{"Blog"}</button>
+            </Link>
+          </li>
         </ul>
       )}
     </div>

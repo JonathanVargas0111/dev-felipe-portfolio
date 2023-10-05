@@ -53,13 +53,13 @@ const Contact = () => {
     <section
       id="section-contact"
       name="section-contac"
-      className="w-full md:h-screen bg-gradient-to-b from-black to-gray-800"
+      className="w-full md:h-screen bg-black text-gray-100"
     >
       {/* Mensaje de envio exito o fallido */}
       <ToastContainer />
-      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full text-gray-400">
+      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full ">
         <div className="pb-8">
-          <h3 className="text-4xl font-bold">
+          <h3 className="text-5xl font-bold">
             Contact
           </h3>
         </div>
@@ -70,7 +70,7 @@ const Contact = () => {
             className="flex flex-col w-full md:w-1/2"
           >
             <input
-              className="p-2 bg-transparent border-2 rounded-md text-white my-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 "
+              className="p-2 bg-transparent border-2 rounded-sm text-white my-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 "
               id='name'
               type="text"
               name="name"
@@ -85,7 +85,7 @@ const Contact = () => {
               )
             }
             <input
-              className="p-2 bg-transparent border-2 rounded-md text-white my-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 "
+              className="p-2 bg-transparent border-2 rounded-sm text-white my-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 "
               id='email'
               type="email"
               name="email"
@@ -101,7 +101,7 @@ const Contact = () => {
             }
             <textarea
               rows="6"
-              className="p-2 bg-transparent border-2 rounded-md text-white my-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 resize-none"
+              className="p-2 bg-transparent border-2 rounded-sm text-white my-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 resize-none"
               id="message"
               name="message"
               placeholder="Enter your message"
@@ -117,7 +117,7 @@ const Contact = () => {
             }
             <button
               type="submit"
-              className="text-white bg-gradient-to-b from-cyan-800  to-blue-800 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+              className="border-solid w-36 border-2 border-white flex items-center justify-center text-base p-2 rounded-sm hover:scale-105 duration-300"
               disabled={formik.isSubmitting}
             >
               {formik.isSubmitting ? (

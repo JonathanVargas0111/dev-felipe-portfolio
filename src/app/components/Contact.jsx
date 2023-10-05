@@ -14,7 +14,7 @@ const Contact = () => {
     message: Yup.string().required(msReque),
   });
 
-  const handleSubmit = async (values, { setSubmitting, resetForm }) => {  
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
       const response = await fetch(process.env.NEXT_PUBLIC_GET_FORM_URL, {
         method: "POST",

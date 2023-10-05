@@ -70,30 +70,38 @@ export const linksProjects = [
   {
     id: 1,
     title: "Retos Front end Mentor",
-    images:["https://github.com/JonathanVargas0111/card-ntf/blob/main/design/desktop-preview.jpg?raw=true"],
+    images: ["https://github.com/JonathanVargas0111/card-ntf/blob/main/design/desktop-preview.jpg?raw=true"],
     linkDisplayed: "https://jonathanvargas0111.github.io/retos-frontend-mentor/",
     linkRepo: "https://github.com/JonathanVargas0111/retos-frontend-mentor"
   },
   {
     id: "2",
     title: "Taller SASS js",
-    images:["https://jonathanvargas0111.github.io/sass_js_distrital/resources/img/imgPage2.PNG"],
-    linkDisplayed:"https://jonathanvargas0111.github.io/sass_js_distrital/",
+    images: ["https://jonathanvargas0111.github.io/sass_js_distrital/resources/img/imgPage2.PNG"],
+    linkDisplayed: "https://jonathanvargas0111.github.io/sass_js_distrital/",
     linkRepo: "https://github.com/JonathanVargas0111/sass_js_distrital"
   },
   {
     id: "3",
     title: "Registro de informacion",
-    images:["https://appatico.com/wp-content/uploads/2022/05/formularios-con-react-formik-yup.png"],
-    linkDisplayed:"https://taller-react-jonathanvargas.vercel.app/",
+    images: ["https://appatico.com/wp-content/uploads/2022/05/formularios-con-react-formik-yup.png"],
+    linkDisplayed: "https://taller-react-jonathanvargas.vercel.app/",
     linkRepo: "https://github.com/JonathanVargas0111/taller_react_pasos"
   },
   {
     id: "4",
     title: "DigitalArt",
-    images:["/img/portfolio/imgDigitalArt.png"],
-    linkDisplayed:"https://agencia-digital-eight.vercel.app/",
+    images: ["/img/portfolio/imgDigitalArt.png"],
+    linkDisplayed: "https://agencia-digital-eight.vercel.app/",
     linkRepo: "https://github.com/JonathanVargas0111/agencia-digital"
+  }
+  ,
+  {
+    id: "5",
+    title: "The tirckets",
+    images: ["/img/portfolio/the_trickets.png"],
+    linkDisplayed: "https://the-trickest.vercel.app/",
+    linkRepo: "https://github.com/JonathanVargas0111/the-trickest"
   }
 ]
 
@@ -103,10 +111,8 @@ export const translation = {
     about: {
       title: "Sobre mi",
       description: [
-        "Soy un apasionado desarrollador Front-End que busca constantemente nuevos desafíos en el campo de la tecnología. Disfruto resolviendo problemas y mejorando la experiencia del usuario mediante la aplicación de habilidades y conocimientos en programación y desarrollo de software.",
-        "Con un Diplomado en Desarrollo de Software, un Curso en AWS Cloud Foundation y una certificación Data Analytics Certified Associate, he ampliado mi conocimiento técnico y habilidades. Además, he adquirido experiencia en consolidación y administración de inventarios de infraestructura, presentación de informes de gestión, implementación y seguimiento a planes de acción, revisión y control de calidad de la gestión de los requisitos solicitados y la solución de incidentes. Mis competencias incluyen organización, dinamismo, trabajo en equipo y capacidad de análisis.",
-        "Me siento cómodo trabajando con tecnologías como HTML, CSS, SCSS, JavaScript, React JS, Node JS, Express y AWS, las cuales he aplicado exitosamente en proyectos y desarrollos de software. En mi tiempo libre me gusta mantenerme actualizado en las últimas tendencias y desarrollos tecnológicos es esencial para mí, y participo en actividades extracurriculares para ampliar mi conocimiento y habilidades.Si estás buscando un desarrollador Front-End apasionado y comprometido, ¡no dudes en contactarme!"
-      ]
+        "Soy un apasionado desarrollador con una sólida formación y experiencia en desarrollo de software. Mi compromiso con la mejora constante y la resolución de problemas me ha llevado a ampliar mis habilidades técnicas y conocimientos",
+        "Estoy cómodo trabajando con tecnologías como HTML, CSS, JavaScript, React JS, Node JS y AWS. Si buscas un desarrollador Front-End comprometido y apasionado, estaré encantado de trabajar contigo."]
     }
   },
   en: {

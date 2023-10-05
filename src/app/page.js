@@ -10,13 +10,13 @@ import Portfolio from './components/Portfolio'
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <NavBar />
+      {/* <NavBar />
       <Header/>
       <SocialLinks />
-      <About />
-      <Portfolio/>      
       <Skills/> 
-      <Contact /> 
+      <Portfolio/>   */}    
+      <About />
+     <Contact /> 
     </main>
   )
 }

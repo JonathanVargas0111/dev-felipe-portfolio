@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import { setLang } from "../store/slices/settings/SettingsSlices";
 import { translation } from "../assets/translation";
+import Image from 'next/image'
 
 const NavBar = () => {
   const { lang } = useSelector((state) => state.settings);
@@ -21,10 +22,18 @@ const NavBar = () => {
   }
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-8 text-white bg-black fixed">
-      <div>
-        <h1 className="text-3xl md:text-4xl font-signature ml-2">Jonathan Vargas</h1>
+    <div className="flex justify-between items-center w-full px-8 text-white bg-black fixed ">
+      <div className='flex items-center'>
+        <Image
+          src="/img/logoSky700.png"
+          width={120}
+          height={100}
+          alt="Picture of the author"
+        />
+        <h1 className="hidden md:block text-3xl md:text-3xl font-signature ml-2">Jonathan Vargas</h1>
       </div>
+
+
       <ul className="hidden md:flex">
         {links.map(({ id, idSection, titleBtn }) => (
           <li

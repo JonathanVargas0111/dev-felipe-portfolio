@@ -4,7 +4,7 @@ import SocialLinks from './components/SocialLinks'
 import About from './components/About'
 import Skills from './components/Skills'
 import Contact from './components/ContactUseFormik'
-import Portfolio from './components/Portfolio'
+import Projects from './components/ProjectsSection/Projects'
 
 
 export default function Home() {
@@ -13,10 +13,11 @@ export default function Home() {
       {/* <NavBar />
       
       <Skills/> 
-    <Portfolio/>   */}
+    */}
       <SocialLinks />
       <Header />
       <About />
+      <Projects/>   
       <Contact />
     </main>
   )

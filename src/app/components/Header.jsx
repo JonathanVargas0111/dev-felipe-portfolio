@@ -5,43 +5,38 @@ import { HiArrowRight } from "react-icons/hi";
 import Link from 'next/link';
 
 const Header = () => {
+    const backgroundStyle = {
+        backgroundImage: `url(${'/img/logoSky700.svg'})`,
+    };
+
     return (
-        <section
-            id="section-home"
-            className="w-full bg-gradient-to-b from-black via-black to-gray-800 pt-20 md:h-screen">
-
-            <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center md:h-full px-4 md:flex-row">
-                <div className="flex flex-col justify-center h-full">
-
-                    <h2 className="text-4xl sm:text-7xl font-bold text-white">
-                        Front End Developer
-                    </h2>
-                    <p className="text-gray-500 py-4 max-w-md text-lg">
-                        Apasionado en la búsqueda constante de nuevos desafíos en tecnología.
-                        Tengo habilidades en programación, desarrollo de software, organización, trabajo en equipo, análisis
-                        e implemetado tecnologías como HTML, CSS, SCSS, JavaScript, React JS
+        <section id="section-home" className="relative w-full px-5 py-12 md:h-screen md:flex md:items-center bg-black">
+            {/* Fondo de imagen */}
+            <div className="absolute inset-0 text-gray-400 bg-no-repeat bg-right-bottom bg-gradient-to-b opacity-25 hidden sm:flex" style={backgroundStyle}></div>
+            {/* Contenido */}
+            <div className='relative z-20 justify-centern text-left'>
+                <h2 className="text-[13vw] text-gray-500 font-bold sm:text-7xl">
+                    Hola, <span className='text-white'>Soy Desarrollador</span> Front-End
+                </h2>
+                <div className='mt-6'>
+                    <p className='text-gray-500'>Mi nombre es <span className='text-white text-lg'>Jonathan Vargas </span>  </p>
+                    <p className="hidden text-gray-300 md:flex">
+                        Apasionado en la búsqueda constante de nuevos desafíos.
+                        Con habilidades en desarrollo de software, organización, trabajo en equipo y análisis
                     </p>
-                    <div>
-                        {/* <Link
-                        href=""
-                        duration={500}
-                        className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
-                        >
-                        Portfolio
-                        <span className="group-hover:rotate-90 duration-300">
-                            <HiArrowRight size={25} className="ml-1" />
-                        </span> 
-                    </Link> */}
-                    </div>
                 </div>
-                <div>
-                    <Image
-                        src={HeroImage}
-                        alt="my profile"
-                        className="rounded-3xl mx-auto my-5 w-1/3 md:w-2/3"
-                    />
-                </div>
+                <button
+                    href=""
+                    duration={500}
+                    className="flex items-center text-lg mt-4 text-white"
+                >
+                    Proyectos
+                    <span className="hover:rotate-90 duration-300">
+                        <HiArrowRight size={15} className="ml-1" />
+                    </span>
+                </button>
             </div>
+
         </section>
     )
 }

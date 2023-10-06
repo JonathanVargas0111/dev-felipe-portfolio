@@ -10,7 +10,7 @@ const Header = () => {
     };
 
     return (
-        <section id="section-home" className="relative w-full px-5 py-12 md:h-screen md:flex md:items-center bg-black">
+        <section id="section-home" className="relative w-full px-5 py-12 mt-12 md:h-screen md:flex md:items-center bg-black">
             {/* Fondo de imagen */}
             <div className="absolute inset-0 text-gray-400 bg-no-repeat bg-right-bottom bg-gradient-to-b opacity-25 hidden sm:flex" style={backgroundStyle}></div>
             {/* Contenido */}

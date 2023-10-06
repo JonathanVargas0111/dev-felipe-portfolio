@@ -7,21 +7,21 @@ const Projects = () => {
     <section
       name="portfolio"
       id="section-portfolio"
-      className="w-full flex flex-col bg-black text-gray-100 px-5 py-12 border-none 
-      md:flex-row md:items-center md:h-screen md:justify-center md:gap-6"
+      className="w-full flex flex-col text-gray-100 py-12 
+      lg:flex-row lg:items-center lg:h-screen"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full text-white">
-        <h2 className="text-4xl font-bold mb-8" >
+      <div className='w-full text-5xl text-left font-bold mb-6 lg:w-1/4 lg:text-right lg:text-6xl'>
+        <h2 className="">
           Proyectos
         </h2>
+      </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:px-12 sm:px-0">
-          {
-            dataProjects.map((project) => (
-              <ProjectCard project={project} key={project.id}></ProjectCard>
-            ))
-          }
-        </div>
+      <div className="w-full grid grid-cols-2 gap-4 text-center py-3 sm:px-0 lg:w-3/4 lg:grid-cols-3 lg:px-5">
+        {
+          dataProjects.map((project) => (
+            <ProjectCard project={project} key={project.id}></ProjectCard>
+          ))
+        }
       </div>
     </section>
   );

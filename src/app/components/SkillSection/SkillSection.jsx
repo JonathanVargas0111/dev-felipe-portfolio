@@ -67,26 +67,26 @@ const SkillsSection = () => {
         <section
             id="section-skills"
             name="section-skills"
-            className="w-full flex flex-col text-gray-100 px-5 py-12 border-none 
-            md:flex-row md:items-center md:h-screen md:justify-center md:gap-6"
+            className="w-full flex flex-col text-gray-100 py-12 
+            lg:flex-row lg:items-center lg:h-screen"
         >
-            <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full text-white">
-
-                <p className="text-4xl font-bold mb-8">
+            <div className='w-full text-5xl text-left font-bold mb-6 lg:w-1/4 lg:text-right lg:text-6xl'>
+                <h2 className="">
                     Skills
-                </p>
-                <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8  md:px-12 sm:px-0">
-                    {
-                        techs.map(({ id, src, title, style }) => (
-                            <SkillCard
-                                id={id}
-                                src={src}
-                                title={title}
-                                style={style}
-                            ></SkillCard>
-                        ))
-                    }
-                </div>
+                </h2>
+            </div>
+            <div className="w-full grid grid-cols-3 gap-4 sm:grid-cols-4  text-center py-3 sm:px-0 
+                    lg:w-3/4 lg:px-5">
+                {
+                    techs.map(({ id, src, title, style }) => (
+                        <SkillCard
+                            id={id}
+                            src={src}
+                            title={title}
+                            style={style}
+                        ></SkillCard>
+                    ))
+                }
             </div>
         </section>
     );

@@ -5,7 +5,7 @@ import Image from 'next/image';
 const ProjectCard = ({ project }) => {
     return (
         <div key={project.id} className=" shadow-md shadow-gray-200  duration-300 text-gray-300">
-            <div className="h-48">
+            <div className="h-32">
                 <Image
                     src={project.images[0]}
                     width={500}

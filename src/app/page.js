@@ -9,7 +9,7 @@ import SkillsSection from './components/SkillSection/SkillSection'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-black">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-black px-5  md:px-[10%]">
       <NavBar />
       <SocialLinks />
       <Header />

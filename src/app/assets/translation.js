@@ -47,7 +47,7 @@ const linksEs = [
   {
     id: 3,
     idSection: "portfolio",
-    titleBtn: "portafolio"
+    titleBtn: "Proyectos"
   },
   {
     id: 4,

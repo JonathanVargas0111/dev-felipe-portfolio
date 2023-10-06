@@ -28,7 +28,7 @@ const SocialLinks = () => {
             ),
             href: "https://github.com/JonathanVargas0111",
         },
-        {
+        /* {
             id: 3,
             child: (
                 <>
@@ -36,7 +36,7 @@ const SocialLinks = () => {
                 </>
             ),
             href: "mailto:foo@gmail.com",
-        },
+        }, */
         {
             id: 4,
             child: (
@@ -53,7 +53,7 @@ const SocialLinks = () => {
                     Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href: "/resume.pdf",
+            href: "/CV_jonathan_vargas.pdf",
             style: "rounded-br-md",
             download: true,
         },

@@ -12,4 +12,4 @@ const SkillCard = ({ id, src, title, style }) => {
     )
 }
 
-export default SkillCardw
+export default SkillCard

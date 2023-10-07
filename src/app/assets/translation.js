@@ -99,7 +99,7 @@ export const linksProjects = [
   {
     id: "5",
     title: "The trickets",
-    images: ["/img/portfolio/the_trickets.png"],
+    images: ["/img/portfolio/theTrickets.png"],
     linkDisplayed: "https://the-trickest.vercel.app/",
     linkRepo: "https://github.com/JonathanVargas0111/the-trickest"
   }

@@ -10,7 +10,7 @@ const Projects = () => {
       className="w-full flex flex-col text-gray-100 py-12 
       lg:flex-row lg:items-center lg:h-screen"
     >
-      <div className='w-full text-5xl text-left font-bold mb-6 lg:w-1/4 lg:text-right lg:text-6xl'>
+      <div className='w-full text-5xl text-left font-bold mb-6 lg:w-1/4 lg:text-right'>
         <h2 className="">
           Proyectos
         </h2>

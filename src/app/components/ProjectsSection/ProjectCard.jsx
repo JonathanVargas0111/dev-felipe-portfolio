@@ -10,7 +10,7 @@ const ProjectCard = ({ project }) => {
                     src={project.images[0]}
                     width={500}
                     height={250}
-                    className="w-full h-full object-cover md:grayscale md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100"
+                    className="w-full h-full object-cover md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100"
                     alt="imagen de project"
                 />
             </div>

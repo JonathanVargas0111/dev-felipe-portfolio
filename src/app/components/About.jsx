@@ -5,15 +5,15 @@ const About = () => {
             name="about"
             id="section-about"
             className="w-full flex flex-col text-gray-100 py-12 
-            lg:flex-row lg:items-center lg:h-screen "
+            lg:flex-row lg:items-center lg:h-screen gap-4 "
         >
-            <div className='w-full text-5xl text-left font-bold mb-6 lg:w-1/4 lg:text-right lg:text-6xl'>
+            <div className='w-full text-5xl text-left font-bold mb-6 lg:w-2/5 lg:text-right md:text-[8vw] lg:text-[6vw] '>
                 <h2 className="">
                     Sobre mi
                 </h2>
             </div>
 
-            <div className='flex flex-col gap-4 text-lg text-left lg:w-3/4 lg:px-5'>
+            <div className='flex flex-col gap-4 text-lg text-left lg:w-3/5 lg:px-5'>
                 <p>
                     Soy un apasionado desarrollador con sólida formación y experiencia en desarrollo de software. Mi compromiso con la mejora constante y la resolución de problemas me ha impulsado a ampliar mis habilidades y conocimientos.
                 </p>

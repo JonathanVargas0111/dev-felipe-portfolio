@@ -30,7 +30,7 @@ const NavBar = () => {
           height={60}
           alt="Picture of the author"
         />
-        <h1 className="hidden lg:block text-3xl md:text-3xl font-signature ml-2">Jonathan Vargas</h1>
+        <h1 className="hidden lg:block text-3xl md:text-3xl font-signature ml-2">Felipe Vargas</h1>
       </div>
       <ul className="hidden md:flex">
         {links.map(({ id, idSection, titleBtn }) => (

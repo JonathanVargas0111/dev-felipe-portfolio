@@ -53,26 +53,24 @@ const Contact = () => {
     <section
       id="section-contact"
       name="section-contac"
-      className="w-full flex flex-col text-gray-100 py-12 
-      lg:flex-row lg:items-center lg:h-screen"
+      className="flex flex-col w-full py-12 text-gray-100 lg:flex-row lg:items-center lg:h-screen"
     >
       {/* Mensaje de envio exito o fallido */}
       <ToastContainer />
 
-
-      <div className='w-full text-5xl text-left font-bold mb-6 lg:w-1/4 lg:text-right lg:text-6xl'>
+      <div className='w-full text-5xl text-left font-bold mb-6 lg:w-2/5 lg:text-right md:text-[8vw] lg:text-[6vw] '>
         <h2 className="">
-          Contact
+        Contact
         </h2>
       </div>
-
-      <div className="flex flex-col gap-4 text-lg text-left lg:w-3/4 lg:px-5 lg:justify-start">
+      
+      <div className="flex flex-col gap-2 text-lg text-left lg:w-3/5 lg:px-5 lg:justify-start">
         <form
           onSubmit={formik.handleSubmit}
-          className="flex flex-col w-full max-w-md mx-auto"
+          className="flex flex-col w-full max-w-md mx-auto lg:mx-0"
         >
           <input
-            className="p-2 bg-transparent border-2 rounded-sm text-white my-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 "
+            className="p-2 my-2 text-white bg-transparent border-2 rounded-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 "
             id='name'
             type="text"
             name="name"
@@ -83,11 +81,11 @@ const Contact = () => {
           />
           {
             formik.touched.name && formik.errors.name && (
-              <p className="text-red-500 text-xs italic">{formik.errors.name}</p>
+              <p className="text-xs italic text-red-500">{formik.errors.name}</p>
             )
           }
           <input
-            className="p-2 bg-transparent border-2 rounded-sm text-white my-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 "
+            className="p-2 my-2 text-white bg-transparent border-2 rounded-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 "
             id='email'
             type="email"
             name="email"
@@ -98,12 +96,12 @@ const Contact = () => {
           />
           {
             formik.touched.email && formik.errors.email && (
-              <p className="text-red-500 text-xs italic">{formik.errors.email}</p>
+              <p className="text-xs italic text-red-500">{formik.errors.email}</p>
             )
           }
           <textarea
             rows="6"
-            className="p-2 bg-transparent border-2 rounded-sm text-white my-2 focus:outline-none focus:ring-blue-500 focus:border-blue-500 resize-none"
+            className="p-2 my-2 text-white bg-transparent border-2 rounded-sm resize-none focus:outline-none focus:ring-blue-500 focus:border-blue-500"
             id="message"
             name="message"
             placeholder="Enter your message"
@@ -114,17 +112,17 @@ const Contact = () => {
           />
           {
             formik.touched.message && formik.errors.message && (
-              <p className="text-red-500 text-xs italic">{formik.errors.message}</p>
+              <p className="text-xs italic text-red-500">{formik.errors.message}</p>
             )
           }
           <button
             type="submit"
-            className="border-solid w-36 border-2 border-white flex items-center justify-center text-base p-2 rounded-sm hover:scale-105 duration-300"
+            className="flex items-center justify-center p-2 text-base duration-300 border-2 border-white border-solid rounded-sm w-36 hover:scale-105"
             disabled={formik.isSubmitting}
           >
             {formik.isSubmitting ? (
               <>
-                <HiOutlineRefresh className="animate-spin mr-2" />
+                <HiOutlineRefresh className="mr-2 animate-spin" />
                 Sending...
               </>
             ) : (

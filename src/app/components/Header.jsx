@@ -13,17 +13,13 @@ const Header = () => {
             <div className="absolute inset-0 hidden bg-right-bottom bg-no-repeat opacity-25 sm:flex" style={backgroundStyle}></div>
             {/* Contenido */}
             <div className='relative z-20 justify-center text-left'>
-                <h2 className="text-[12vw] text-gray-500 font-bold sm:text-7xl md:text-6xl lg:text-7xl md:flex md:flex-col md:gap-4">
-                    Hola, soy Felipe Vargas <span className='text-white'>Desarrollador Web </span>
+                <h2 className="text-[12vw] text-gray-500 font-bold sm:text-7xl md:text-6xl md:flex md:flex-col md:gap-4">
+                    Hola, soy Felipe Vargas <span className='text-white lg:text-5xl'>Desarrollador Web y Consultor en Tecnología </span>
                 </h2>
                 <div className='mt-6 lg:text-xl'>
                     <p className='text-gray-100'>Desarrollador Front-End, Ingeniero de Sistemas</p>
                     <p className="hidden mt-5 text-gray-200 md:flex ">
-                        Orientado a la mejora continua de la
-                        experiencia del usuario. Con experiencia en desarrollo de software y gestión de
-                        infraestructura, mis habilidades incluyen JavaScript, React JS, Next JS, Node JS, Express y AWS.
-                        Activo en la búsqueda de nuevas tecnologías y participando en actividades
-                        extracurriculares para ampliar mis habilidades
+                    Apasionado por la mejora continua de la experiencia del usuario y con una trayectoria en desarrollo de software y gestión de infraestructura. Mis habilidades incluyen JavaScript, React JS, Next JS, Node JS, Express y AWS. Siempre en busca de nuevas tecnologías y participando activamente en actividades extracurriculares para expandir mis competencias.
                     </p>
                 </div>
                 

@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Felipe Vargas | Desarrollador Web y Consultor en Tecnología',
 
-  description: 'Felipe Vargas, desarrollador web con experiencia en software, diseño y consultoría tecnológica. Descubre cómo transformar tus ideas en soluciones digitales.',
+  description: 'Felipe Vargas, desarrollador web con experiencia en software, diseño y consultoría tecnológica. Descubre cómo transformar tus ideas en soluciones digitales',
   applicationName: 'Felipe Vargas Portfolio',
   openGraph: {
     title: 'Felipe Vargas | Desarrollador Web y Consultor en Tecnología | React | felipevargasx felipevargasx_',

@@ -5,6 +5,7 @@ import About from './components/About'
 import Contact from './components/ContactUseFormik'
 import Projects from './components/ProjectsSection/Projects'
 import SkillsSection from './components/SkillSection/SkillSection'
+import Portfolio from './components/Portfolio'
 
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
       <Header />
       <About />
       <SkillsSection/>
-      <Projects/>   
+      <Projects/>  
       <Contact />
     </main>
   )

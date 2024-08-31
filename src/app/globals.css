@@ -10,10 +10,11 @@
 @tailwind utilities;
 
 @layer{
-    html{
-        font-family: 'Montserrat','Bonheur Royale', sans-serif;
-        
-    }
+    
+}
+html{
+  font-family: 'Montserrat','Bonheur Royale', sans-serif;
+  scroll-behavior: smooth;        
 }
 
 *{

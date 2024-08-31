@@ -30,13 +30,13 @@ const NavBar = () => {
           height={60}
           alt="Picture of the author"
         />
-        <h1 className="hidden lg:block text-3xl md:text-3xl font-signature ml-2">Felipe Vargas</h1>
+        <h1 className="hidden ml-2 text-3xl lg:block md:text-3xl font-signature">Felipe Vargas</h1>
       </div>
       <ul className="hidden md:flex">
         {links.map(({ id, idSection, titleBtn }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200 ">
+            className="px-4 font-medium text-white capitalize duration-200 cursor-pointer hover:scale-105 ">
             <Link href={`/#section-${idSection}`} className='transition duration-500'>
               <button className='my-5 capitalize transition duration-500'>{titleBtn}</button>
             </Link>
@@ -44,8 +44,8 @@ const NavBar = () => {
         ))}
 
         <li
-          className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200 ">
-          <Link href={`https://medium.com/@jonathanvargas_61788`} className='transition duration-500' target="_blank">
+          className="px-4 font-medium text-white capitalize duration-200 cursor-pointer hover:scale-105 ">
+          <Link href={`https://medium.com/@Felipevargasx`} className='transition duration-500' target="_blank">
             <button className='my-5 capitalize transition duration-500'>{"Blog"}</button>
           </Link>
         </li>
@@ -53,15 +53,14 @@ const NavBar = () => {
         {/* <li>
           <button 
           onClick={changeLanguage}
-          className="m-4 p-1 cursor-pointer font-medium text-sky-300 hover:scale-105 duration-200 
-          border-2 border-sky-300 rounded-md"
+          className="p-1 m-4 font-medium duration-200 border-2 rounded-md cursor-pointer text-sky-300 hover:scale-105 border-sky-300"
           >
           {lang}</button>
         </li> */}
       </ul>
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-white md:hidden "
+        className="z-10 pr-4 text-white cursor-pointer md:hidden "
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
@@ -70,12 +69,12 @@ const NavBar = () => {
           {links.map(({ id, idSection, titleBtn }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl">
+              className="px-4 py-6 text-4xl capitalize cursor-pointer">
               <Link href={`/#section-${idSection}`}><button className='m-5 capitalize' onClick={() => setNav(!nav)}>{titleBtn}</button></Link>
             </li>
           ))}
 
-          <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
+          <li className="px-4 py-6 text-4xl capitalize cursor-pointer">
             <Link href={`https://medium.com/@jonathanvargas_61788`}>
               <button className='m-5 capitalize' onClick={() => setNav(!nav)}>Blog</button>
             </Link>

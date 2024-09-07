@@ -25,7 +25,7 @@ const projects = [
     src: project2
   },
   {
-    title: 'watermelonCode',
+    title: 'Ask and Create',
     desc: 'Created a responsive business website using Nextjs with custom animations handled by jQuery.',
     devstack: 'Nextjs,TS,Tailwindcss,React,NextUi ',
     link: "https://askncreate.vercel.app/",

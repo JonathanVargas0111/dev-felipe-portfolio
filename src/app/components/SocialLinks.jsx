@@ -44,7 +44,7 @@ const SocialLinks = () => {
                     Twitter <FaXTwitter size={30} />
                 </>
             ),
-            href: "https://twitter.com/jonathanfva92",
+            href: "https://x.com/felipevargasx_",
         },
         {
             id: 5,
@@ -73,7 +73,7 @@ const SocialLinks = () => {
                     >
                         <Link
                             href={href}
-                            className="flex justify-between items-center w-full text-white"
+                            className="flex items-center justify-between w-full text-white"
                             download={download}
                             target="_blank"
                             rel="noreferrer"

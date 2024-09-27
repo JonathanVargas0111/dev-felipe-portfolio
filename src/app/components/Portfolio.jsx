@@ -75,7 +75,7 @@ const Portfolio = () => {
                 </div>
 
                 <p className='p-0 py-4 m-0 text-lg break-words text-white/70 lg:hidden'>{project.desc}</p>
-                <p className='text-sm text-[#55A1FF] font-semibold m-0 p-0'>{project.devstack}</p>
+                {/* <p className='text-sm text-[#55A1FF] font-semibold m-0 p-0'>{project.devstack}</p> */}
                 <div className='w-48 h-[1px] bg-gray-400 my-4'></div>
                 <div className='flex w-48 gap-x-6'>
                   {

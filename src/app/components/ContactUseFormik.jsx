@@ -5,6 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useFormik } from 'formik';
 import { HiOutlineRefresh } from 'react-icons/hi';
+import WhatsAppButton from "./WhatsAppButton";
 
 
 const validationSchema = Yup.object({
@@ -60,10 +61,10 @@ const Contact = () => {
 
       <div className='w-full text-5xl text-left font-bold mb-6 lg:w-2/5 lg:text-right md:text-[8vw] lg:text-[6vw] '>
         <h2 className="">
-        Contact
+          Contact
         </h2>
       </div>
-      
+
       <div className="flex flex-col gap-2 text-lg text-left lg:w-3/5 lg:px-5 lg:justify-start">
         <form
           onSubmit={formik.handleSubmit}
@@ -115,20 +116,24 @@ const Contact = () => {
               <p className="text-xs italic text-red-500">{formik.errors.message}</p>
             )
           }
-          <button
-            type="submit"
-            className="flex items-center justify-center p-2 text-base duration-300 border-2 border-white border-solid rounded-sm w-36 hover:scale-105"
-            disabled={formik.isSubmitting}
-          >
-            {formik.isSubmitting ? (
-              <>
-                <HiOutlineRefresh className="mr-2 animate-spin" />
-                Sending...
-              </>
-            ) : (
-              'Send'
-            )}
-          </button>
+          <div className="flex justify-between md:flex-row items-center">
+            <button
+              type="submit"
+              className="flex items-center justify-center p-2 text-base duration-300 border-2 border-white border-solid rounded-sm w-36 hover:scale-105"
+              disabled={formik.isSubmitting}
+            >
+              {formik.isSubmitting ? (
+                <>
+                  <HiOutlineRefresh className="mr-2 animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                'Send'
+              )}
+            </button>
+            <p className="text-white text-lg">O</p>
+            <WhatsAppButton/>
+          </div>
         </form>
       </div>
     </section>

@@ -2,7 +2,7 @@
 import React from 'react';
 
 const WhatsAppButton = () => {
-  const phoneNumber = '573125225009'; // Cambia este número por el tuyo (formato: código de país + número)
+  const phoneNumber = '573013415322'; // Cambia este número por el tuyo (formato: código de país + número)
 
   const handleWhatsAppClick = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}`;

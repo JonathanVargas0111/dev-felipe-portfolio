@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://felipevargas.vercel.app/sitemap.xml

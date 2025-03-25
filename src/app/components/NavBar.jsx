@@ -1,9 +1,8 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from 'next/link'
-import { useSelector } from 'react-redux'
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux'
 import { setLang } from "../store/slices/settings/SettingsSlices";
 import { translation } from "../assets/translation";
 import Image from 'next/image'
@@ -12,77 +11,71 @@ const NavBar = () => {
   const { lang } = useSelector((state) => state.settings);
   const dispatch = useDispatch();
   const [nav, setNav] = useState(false);
-  const [links, setLiks] = useState(translation[lang].links)
 
-
+  const links = translation[lang].links;
 
   const changeLanguage = () => {
-    lang === "es" ? dispatch(setLang("en")) : dispatch(setLang("es"));
-    setLiks(translation[lang].links)
-  }
+    dispatch(setLang(lang === "es" ? "en" : "es"));
+  };
 
   return (
-    <div className="flex justify-between items-center w-full px-4 md:px-[10%] text-white bg-black fixed z-50">
+    <nav className="flex justify-between items-center w-full px-4 md:px-[10%] text-white bg-black fixed z-50">
+      {/* Logo */}
       <div className='flex items-center'>
         <Image
           src="/img/logoSky700.png"
           width={90}
           height={60}
-          alt="Picture of the author"
+          alt="Logo Felipe Vargas"
+          priority
         />
         <h1 className="hidden ml-2 text-3xl lg:block md:text-3xl font-signature">Felipe Vargas</h1>
       </div>
+
+      {/* Desktop Menu */}
       <ul className="hidden md:flex">
         {links.map(({ id, idSection, titleBtn }) => (
-          <li
-            key={id}
-            className="px-4 font-medium text-white capitalize duration-200 cursor-pointer hover:scale-105 ">
+          <li key={id} className="px-4 font-medium text-white capitalize duration-200 cursor-pointer hover:scale-105">
             <Link href={`/#section-${idSection}`} className='transition duration-500'>
               <button className='my-5 capitalize transition duration-500'>{titleBtn}</button>
             </Link>
           </li>
         ))}
-
-        <li
-          className="px-4 font-medium text-white capitalize duration-200 cursor-pointer hover:scale-105 ">
-          <Link href={`https://medium.com/@Felipevargasx`} className='transition duration-500' target="_blank">
-            <button className='my-5 capitalize transition duration-500'>{"Blog"}</button>
+        <li className="px-4 font-medium text-white capitalize duration-200 cursor-pointer hover:scale-105">
+          <Link href="https://medium.com/@Felipevargasx" target="_blank" rel="noopener noreferrer">
+            <button className='my-5 capitalize transition duration-500'>Blog</button>
           </Link>
         </li>
-
-        {/* <li>
-          <button 
-          onClick={changeLanguage}
-          className="p-1 m-4 font-medium duration-200 border-2 rounded-md cursor-pointer text-sky-300 hover:scale-105 border-sky-300"
-          >
-          {lang}</button>
-        </li> */}
       </ul>
-      <div
+
+      {/* Mobile Menu Icon */}
+      <button
         onClick={() => setNav(!nav)}
-        className="z-10 pr-4 text-white cursor-pointer md:hidden "
+        className="z-10 pr-4 text-white cursor-pointer md:hidden"
+        aria-label="Toggle menu"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-      </div>
+      </button>
+
+      {/* Mobile Menu */}
       {nav && (
         <ul className="absolute top-0 left-0 w-full h-screen flex flex-col justify-start bg-black text-white pt-12 bg-[url('/img/bgooorganize.svg')]">
           {links.map(({ id, idSection, titleBtn }) => (
-            <li
-              key={id}
-              className="px-4 py-6 text-4xl capitalize cursor-pointer">
-              <Link href={`/#section-${idSection}`}><button className='m-5 capitalize' onClick={() => setNav(!nav)}>{titleBtn}</button></Link>
+            <li key={id} className="px-4 py-6 text-4xl capitalize cursor-pointer">
+              <Link href={`/#section-${idSection}`}>
+                <button className='m-5 capitalize' onClick={() => setNav(false)}>{titleBtn}</button>
+              </Link>
             </li>
           ))}
-
           <li className="px-4 py-6 text-4xl capitalize cursor-pointer">
-            <Link href={`https://medium.com/@jonathanvargas_61788`}>
-              <button className='m-5 capitalize' onClick={() => setNav(!nav)}>Blog</button>
+            <Link href="https://medium.com/@Felipevargasx" target="_blank" rel="noopener noreferrer">
+              <button className='m-5 capitalize' onClick={() => setNav(false)}>Blog</button>
             </Link>
           </li>
         </ul>
       )}
-    </div>
+    </nav>
   );
 };
 
-export default NavBar
+export default NavBar;

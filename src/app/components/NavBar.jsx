@@ -21,15 +21,18 @@ const NavBar = () => {
   return (
     <nav className="flex justify-between items-center w-full px-4 md:px-[10%] text-white bg-black fixed z-50">
       {/* Logo */}
-      <div className='flex items-center'>
+      <div itemScope itemProp="image" className='flex items-center'>
         <Image
           src="/img/logoSky700.png"
           width={90}
           height={60}
-          alt="Logo Felipe Vargas"
+          alt="Felipe Vargas - Desarrollador Full Stack"
           priority
+          itemProp="logo"
         />
-        <h1 className="hidden ml-2 text-3xl lg:block md:text-3xl font-signature">Felipe Vargas</h1>
+        <h1 itemProp="name" className="hidden ml-2 text-3xl lg:block md:text-3xl font-signature">
+          Felipe Vargas <span className="text-sm font-normal">| Desarrollador Full Stack</span>
+        </h1>
       </div>
 
       {/* Desktop Menu */}

@@ -24,16 +24,27 @@ const SkillsSection = () => {
         <section
             id="section-skills"
             className="flex flex-col w-full gap-4 py-12 text-gray-100 lg:flex-row lg:items-center lg:h-screen"
+            itemScope
+            itemType="http://schema.org/ItemList"
+            aria-label="Habilidades técnicas de Felipe Vargas - Desarrollo Web Full Stack"
         >
-            {/* Título */}
+            {/* Título optimizado */}
             <div className="w-full text-5xl font-bold text-left mb-6 lg:w-2/5 lg:text-right md:text-[8vw] lg:text-[6vw]">
-                <h2>Skills</h2>
+                <h2 itemProp="name">Habilidades Técnicas</h2>
             </div>
 
-            {/* Grid de Skills */}
-            <div className="grid w-full grid-cols-3 gap-4 py-3 text-center sm:grid-cols-4 sm:px-0 lg:w-3/5 lg:px-5">
-                {techs.map(({ id, src, title, style }) => (
-                    <SkillCard key={id} src={src} title={title} style={style} />
+            {/* Lista de skills con microdatos */}
+            <div
+                className="grid w-full grid-cols-3 gap-4 py-3 text-center sm:grid-cols-4 sm:px-0 lg:w-3/5 lg:px-5"
+                itemProp="description"
+                data-schema="ItemList"
+            >
+                {techs.map((tech, index) => (
+                    <SkillCard
+                        key={tech.id}
+                        {...tech}
+                        position={index + 1}  // ← Nuevo prop para schema
+                    />
                 ))}
             </div>
         </section>

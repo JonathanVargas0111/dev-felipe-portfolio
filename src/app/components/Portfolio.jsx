@@ -45,20 +45,22 @@ const projects = [
 const Portfolio = () => {
   return (
     <div className="w-full px-2 pt-10 text-white md:pt-10">
-      <div className="mx-auto lg:grid lg:grid-cols-2 gap-y-10">
+      <div
+        className="mx-auto lg:grid lg:grid-cols-2 gap-y-10"
+        itemProp="mainEntity"
+        itemScope
+        itemType="http://schema.org/Project"
+      >
         {projects.map((project, index) => (
           <motion.article
             key={index}
-            initial={{ opacity: 0, y: 75 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className={`flex flex-col gap-6 md:flex-row ${
-              index % 2 === 1 ? "md:flex-row-reverse" : ""
-            } lg:flex lg:flex-col lg:mx-3`}
+            itemProp="itemListElement"
+            itemScope
+            itemType="http://schema.org/CreativeWork"
+            role="listitem"
           >
-            {/* Imagen del proyecto */}
-            <div className="flex items-center justify-center w-full lg:justify-start">
+            {/* Imagen con schema */}
+            <div itemProp="image" itemScope itemType="https://schema.org/ImageObject">
               <a
                 href={project.link}
                 target="_blank"
@@ -67,42 +69,53 @@ const Portfolio = () => {
               >
                 <Image
                   src={project.src}
+                  alt={`Vista previa del proyecto ${project.title} desarrollado por Felipe Vargas - ${project.devstack}`}
                   width={500}
                   height={500}
-                  alt={`Vista previa del proyecto ${project.title}`}
                   className="h-[350px] md:h-52 w-auto object-cover border rounded border-gray-700"
+                  itemProp="contentUrl"
                 />
+                <meta itemProp="author" content="Felipe Vargas" />
               </a>
             </div>
 
-            {/* Información del proyecto */}
-            <div className="max-w-xl space-y-2">
-              <h3 className="text-2xl">{project.title}</h3>
-              <p className="text-lg text-white/70">{project.desc}</p>
+            {/* Contenido del proyecto */}
+            <div itemProp="about">
+              <h3 itemProp="name" className="text-2xl">{project.title}</h3>
 
-              <div className="w-48 h-[1px] bg-gray-400 my-4"></div>
+              <p itemProp="description" className="...">
+                {project.desc}
+                <span className="hidden" itemProp="keywords">{project.devstack}</span>
+              </p>
 
-              <div className="flex w-48 gap-x-6">
+              <div itemProp="technologyUsed" className="hidden">
+                {project.devstack}
+              </div>
+
+              {/* Links con microdatos */}
+              <div itemProp="mainEntityOfPage" itemScope itemType="https://schema.org/WebPage">
                 {project.link && (
                   <a
                     href={project.link}
-                    target="_blank"
+                      target="_blank"
                     rel="noopener noreferrer"
+                    itemProp="url"
                     className="mt-2 text-blue-400 underline hover:text-blue-300"
-                    aria-label={`Ver demo de ${project.title}`}
+                    aria-label={`Demo del proyecto ${project.title} por Felipe Vargas`}
                   >
-                    Demo
+                    <span itemProp="name">Ver Demo</span>
                   </a>
                 )}
                 {project.git && (
                   <a
                     href={project.git}
+                    itemProp="codeRepository"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-2 text-blue-400 underline hover:text-blue-300"
-                    aria-label={`Ver código fuente de ${project.title}`}
+                    aria-label={`Código fuente del proyecto ${project.title} por Felipe Vargas`}
                   >
-                    GitHub
+                    <span itemProp="name">Repositorio GitHub</span>
                   </a>
                 )}
               </div>

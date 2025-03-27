@@ -10,7 +10,7 @@ const SocialLinks = () => {
             id: 1,
             label: "LinkedIn",
             icon: <FaLinkedin size={30} />,
-            href: "https://linkedin.com/in/jonathan-felipe-vargas-arias",
+            href: "https://www.linkedin.com/in/felipevargasarias/",
             style: "rounded-tr-md",
         },
         {

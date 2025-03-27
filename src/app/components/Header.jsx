@@ -20,9 +20,9 @@ const Header = () => {
             {/* Contenido */}
             <div className="relative z-20 text-left">
                 <h1 className="text-[12vw] text-gray-500 font-bold sm:text-7xl md:text-6xl md:flex md:flex-col md:gap-4">
-                    Hola, soy Felipe Vargas{' '}
-                    <span className="text-white lg:text-5xl">
-                        Desarrollador Web y Consultor en Tecnología
+                    Hola, soy <span itemProp="name">Felipe Vargas</span>{' '}
+                    <span className="text-white lg:text-5xl" itemProp="jobTitle">
+                        Desarrollador Web Full Stack y Consultor en Tecnología
                     </span>
                 </h1>
 

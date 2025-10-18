@@ -4,13 +4,11 @@ const About = () => {
     return (
         <section
             id="section-about"
-            className="relative flex flex-col w-full gap-4 py-20 text-gray-100 lg:flex-row lg:items-center min-h-screen"
+            className="flex flex-col w-full gap-4 py-12 text-gray-100 lg:flex-row lg:items-center lg:h-screen"
             itemScope
             itemType="http://schema.org/Person"
             aria-label="Sobre Felipe Vargas - Desarrollador Full Stack"
         >
-            {/* Background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-purple-900/20"></div>
             {/* Schema Markup para Bing/ChatGPT */}
             <script type="application/ld+json">
                 {JSON.stringify({

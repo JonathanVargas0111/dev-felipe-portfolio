@@ -19,7 +19,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center w-full px-4 md:px-[10%] text-white bg-black fixed z-50">
+    <nav className="flex justify-between items-center w-full px-4 md:px-[10%] text-gray-900 dark:text-white bg-white/95 dark:bg-black/95 backdrop-blur-sm fixed z-50 border-b border-gray-200 dark:border-gray-800">
       {/* Logo */}
       <div itemScope itemProp="image" className='flex items-center'>
         <Image
@@ -38,13 +38,13 @@ const NavBar = () => {
       {/* Desktop Menu */}
       <ul className="hidden md:flex">
         {links.map(({ id, idSection, titleBtn }) => (
-          <li key={id} className="px-4 font-medium text-white capitalize duration-200 cursor-pointer hover:scale-105">
+          <li key={id} className="px-4 font-medium text-gray-900 dark:text-white capitalize duration-200 cursor-pointer hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">
             <Link href={`/#section-${idSection}`} className='transition duration-500'>
               <button className='my-5 capitalize transition duration-500'>{titleBtn}</button>
             </Link>
           </li>
         ))}
-        <li className="px-4 font-medium text-white capitalize duration-200 cursor-pointer hover:scale-105">
+        <li className="px-4 font-medium text-gray-900 dark:text-white capitalize duration-200 cursor-pointer hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">
           <Link href="https://medium.com/@Felipevargasx" target="_blank" rel="noopener noreferrer">
             <button className='my-5 capitalize transition duration-500'>Blog</button>
           </Link>
@@ -54,7 +54,7 @@ const NavBar = () => {
       {/* Mobile Menu Icon */}
       <button
         onClick={() => setNav(!nav)}
-        className="z-10 pr-4 text-white cursor-pointer md:hidden"
+        className="z-10 pr-4 text-gray-900 dark:text-white cursor-pointer md:hidden"
         aria-label="Toggle menu"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
@@ -62,7 +62,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {nav && (
-        <ul className="absolute top-0 left-0 w-full h-screen flex flex-col justify-start bg-black text-white pt-12 bg-[url('/img/bgooorganize.svg')]">
+        <ul className="absolute top-0 left-0 w-full h-screen flex flex-col justify-start bg-white/95 dark:bg-black/95 text-gray-900 dark:text-white pt-12 backdrop-blur-sm">
           {links.map(({ id, idSection, titleBtn }) => (
             <li key={id} className="px-4 py-6 text-4xl capitalize cursor-pointer">
               <Link href={`/#section-${idSection}`}>

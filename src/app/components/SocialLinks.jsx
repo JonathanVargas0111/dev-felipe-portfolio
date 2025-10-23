@@ -39,10 +39,10 @@ const SocialLinks = () => {
         <aside className="hidden lg:flex flex-col top-[35%] left-0 fixed z-50">
             <ul>
                 {links.map(({ id, label, icon, href, style, download }) => (
-                    <li key={id} className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-slate-600 bg-opacity-40 hover:bg-opacity-90 ${style}`}>
+                    <li key={id} className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-200/80 dark:bg-gray-800/80 hover:bg-gray-300 dark:hover:bg-gray-700 backdrop-blur-sm border border-gray-300 dark:border-gray-600 ${style}`}>
                         <Link
                             href={href}
-                            className="flex items-center justify-between w-full text-white"
+                            className="flex items-center justify-between w-full text-gray-900 dark:text-white"
                             target="_blank"
                             rel="noopener noreferrer"
                             download={download}

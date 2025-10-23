@@ -1,9 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Providers from "./store/provider";
 import Head from "next/head";
-
-const inter = Inter({ subsets: ["latin"] });
+import Script from "next/script";
 
 export const metadata = {
   title: "Felipe Vargas | Desarrollador Full Stack Freelance - React & Next.js Expert",
@@ -16,8 +14,8 @@ export const metadata = {
   }],
   publisher: "Felipe Vargas",
   verification: {
-    google: "TU_CODIGO_GOOGLE",
-    bing: "TU_CODIGO_BING" // Añade tu código de Bing Webmaster Tools
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "TU_CODIGO_GOOGLE",
+    bing: process.env.NEXT_PUBLIC_BING_VERIFICATION || "TU_CODIGO_BING"
   },
   openGraph: {
     title: "Felipe Vargas - Desarrollador Full Stack Freelance | React & Next.js",
@@ -44,8 +42,18 @@ export const metadata = {
     images: ["https://felipevargas.vercel.app/img/bg-felipevargas.png"],
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+    ],
+    other: [
+      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#2563eb" }
+    ]
   },
   robots: {
     index: true,
@@ -62,14 +70,17 @@ export const metadata = {
       maxImagePreview: "large"
     }
   },
-  metadataBase: new URL("https://felipevargas.vercel.app/"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://felipevargas.vercel.app/"),
   alternates: {
     canonical: "/",
     languages: {
       "es-ES": "/es-ES",
-      "en-US": "/en-US" // Preparado para internacionalización
+      "en-US": "/en-US"
     },
   },
+  category: 'technology',
+  generator: 'Next.js',
+  referrer: 'origin-when-cross-origin',
 };
 
 export default function RootLayout({ children }) {
@@ -137,7 +148,7 @@ export default function RootLayout({ children }) {
       
       <Providers>
         <body 
-          className={`${inter.className} bg-black`} 
+          className="bg-gray-50 dark:bg-black text-gray-900 dark:text-white transition-colors duration-300 font-sans" 
           itemScope 
           itemType="https://schema.org/Person"
           itemID="#felipevargas"

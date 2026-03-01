@@ -1,0 +1,22 @@
+Felipe Vargas — Full-Stack Developer & Automation
+https://felipevargas.vercel.app/
+
+Summary
+Ingeniero de Sistemas y Desarrollador Full-Stack. Construyo experiencias web, ecommerce y automatizaciones con foco en performance, SEO y conversion.
+
+Services
+- Desarrollo web (Next.js, React, TypeScript)
+- Ecommerce (WordPress, WooCommerce)
+- Automatizacion y workflows con IA
+- SEO tecnico y performance
+
+Projects
+- Nandark (servicios de desarrollo y automatizacion): https://nandark.com/
+- Johanna Skincare (cliente): https://johanna-skincare.vercel.app/
+- TechHub (demo): https://techhub-alpha.vercel.app/
+- WebStark (agencia): https://webstark.com.au/
+
+Profiles
+- LinkedIn: https://www.linkedin.com/in/felipevargasarias/
+- GitHub: https://github.com/JonathanVargas0111
+- X: https://twitter.com/felipevargasx_

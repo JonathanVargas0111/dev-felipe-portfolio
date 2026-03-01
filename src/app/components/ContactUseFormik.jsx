@@ -49,16 +49,19 @@ const Contact = () => {
       aria-label="Sección de contacto de Felipe Vargas"
     >
       {/* Schema Markup para información de contacto */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ContactPoint",
-          "contactType": "Contacto profesional",
-          "areaServed": "Global",
-          "availableLanguage": "Spanish",
-          "url": "https://felipevargas.vercel.app/#section-contact"
-        })}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPoint",
+            "contactType": "Contacto profesional",
+            "areaServed": "Global",
+            "availableLanguage": "Spanish",
+            "url": "https://felipevargas.vercel.app/#section-contact"
+          })
+        }}
+      />
 
       {/* Gradiente decorativo */}
       <div className="absolute right-0 top-1/2 -z-10 h-72 w-72 rounded-full bg-[rgba(255,95,46,0.08)] blur-3xl"></div>

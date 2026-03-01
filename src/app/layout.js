@@ -1,7 +1,5 @@
 import "./globals.css";
 import Providers from "./store/provider";
-import Head from "next/head";
-import Script from "next/script";
 
 export const metadata = {
   title: "Felipe Vargas | Full-Stack Developer + Automatización",
@@ -127,69 +125,73 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="es" dir="ltr" itemScope itemType="http://schema.org/WebPage">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href={baseUrl} />
+      <head>
         <meta name="bingbot" content="index, follow" />
-        
-        {/* Datos estructurados principales */}
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData, null, 2)}
-        </script>
 
-        {/* Organización (Nandark) */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Nandark",
-            "url": "https://nandark.com/",
-            "founder": {
-              "@type": "Person",
-              "name": "Felipe Vargas"
-            },
-            "sameAs": [
-              "https://www.linkedin.com/in/felipevargasarias/"
-            ]
-          }, null, 2)}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
 
-        {/* Servicios */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Desarrollo web y automatización",
-            "provider": {
-              "@type": "Person",
-              "name": "Felipe Vargas"
-            },
-            "areaServed": "Worldwide",
-            "serviceType": [
-              "Desarrollo web",
-              "Ecommerce",
-              "Automatización"
-            ],
-            "url": baseUrl
-          }, null, 2)}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Nandark",
+              "url": "https://nandark.com/",
+              "founder": {
+                "@type": "Person",
+                "name": "Felipe Vargas"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/in/felipevargasarias/"
+              ]
+            })
+          }}
+        />
 
-        {/* Datos para Bing/OpenAI */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Portafolio de Felipe Vargas",
-            "url": baseUrl,
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": `${baseUrl}?q={search_term_string}`,
-              "query-input": "required name=search_term_string"
-            }
-          }, null, 2)}
-        </script>
-      </Head>
-      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "Desarrollo web y automatización",
+              "provider": {
+                "@type": "Person",
+                "name": "Felipe Vargas"
+              },
+              "areaServed": "Worldwide",
+              "serviceType": [
+                "Desarrollo web",
+                "Ecommerce",
+                "Automatización"
+              ],
+              "url": baseUrl
+            })
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Portafolio de Felipe Vargas",
+              "url": baseUrl,
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": `${baseUrl}?q={search_term_string}`,
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+      </head>
+
       <Providers>
         <body 
           className="bg-gray-50 dark:bg-black text-gray-900 dark:text-white transition-colors duration-300 font-sans" 

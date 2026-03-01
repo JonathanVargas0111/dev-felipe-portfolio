@@ -31,18 +31,21 @@ const About = () => {
             aria-label="Sobre Felipe Vargas - Desarrollador Full Stack"
         >
             {/* Schema Markup para Bing/ChatGPT */}
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "AboutPage",
-                    "name": "Sobre Felipe Vargas",
-                    "description": "Información profesional sobre Felipe Vargas, Desarrollador Full Stack especializado en React y Next.js",
-                    "publisher": {
-                        "@type": "Organization",
-                        "name": "Felipe Vargas Portfolio"
-                    }
-                })}
-            </script>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "AboutPage",
+                        "name": "Sobre Felipe Vargas",
+                        "description": "Información profesional sobre Felipe Vargas, Desarrollador Full Stack especializado en React y Next.js",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "Felipe Vargas Portfolio"
+                        }
+                    })
+                }}
+            />
 
             {/* Gradiente decorativo */}
             <div className="absolute top-1/2 left-0 -z-10 h-72 w-72 rounded-full bg-[rgba(255,95,46,0.08)] blur-3xl"></div>

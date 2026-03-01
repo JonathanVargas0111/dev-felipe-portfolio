@@ -16,13 +16,13 @@ const ThemeToggle = () => {
     return (
         <button
             onClick={handleToggle}
-            className="fixed z-[9999] p-2.5 transition-all duration-300 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-full shadow-lg top-4 right-4 hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 dark:focus:ring-offset-gray-900"
+            className="fixed right-4 top-4 z-[9999] rounded-full border border-[var(--line)] bg-[var(--card)] p-2.5 text-[var(--ink)] shadow-[var(--shadow)] transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[var(--accent-2)]"
             aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
         >
             {theme === 'dark' ? (
-                <BsSun className="w-5 h-5 text-yellow-500" />
+                <BsSun className="h-5 w-5 text-[var(--accent)]" />
             ) : (
-                <BsMoon className="w-5 h-5 text-gray-800" />
+                <BsMoon className="h-5 w-5 text-[var(--ink-muted)]" />
             )}
         </button>
     )

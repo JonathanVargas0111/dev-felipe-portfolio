@@ -1,5 +1,4 @@
 'use client'
-import { linksProjects } from "../../assets/translation";
 import Portfolio from "../Portfolio";
 import { motion } from "framer-motion";
 
@@ -7,28 +6,27 @@ const Projects = () => {
   return (
     <section
       id="section-portfolio"
-      className="relative flex flex-col w-full gap-8 py-20 text-gray-900 dark:text-gray-100 lg:min-h-screen"
+      className="relative flex w-full flex-col gap-8 py-20 text-[var(--ink)]"
       itemScope
       itemType="http://schema.org/ItemList"
       aria-label="Proyectos de desarrollo web de Felipe Vargas"
     >
-      {/* Gradiente decorativo */}
-      <div className="absolute top-1/4 left-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute top-1/4 left-1/2 -z-10 h-96 w-96 rounded-full bg-[rgba(44,107,255,0.08)] blur-3xl"></div>
 
-      {/* Título con animación */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="w-full text-center mb-8"
+        className="w-full text-left"
       >
-        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 dark:from-white dark:via-gray-300 dark:to-gray-500 bg-clip-text text-transparent" itemProp="name">
-          Portafolio de Proyectos
+        <h2 className="font-display text-5xl font-semibold text-[var(--ink)] md:text-6xl lg:text-7xl" itemProp="name">
+          Proyectos en producción
         </h2>
-        <div className="mt-4 h-1 w-32 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
-        <p className="mt-6 text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-          Explora algunos de mis proyectos más destacados en desarrollo web
+        <div className="mt-4 h-1 w-32 bg-[var(--accent)]"></div>
+        <p className="mt-6 max-w-2xl text-lg text-[var(--ink-muted)]">
+          Casos reales con foco en performance, conversión y escalabilidad. Algunos son privados,
+          pero puedo compartir más detalles en entrevista.
         </p>
       </motion.div>
 

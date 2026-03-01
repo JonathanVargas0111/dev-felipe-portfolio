@@ -1,52 +1,65 @@
 'use client'
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import project from "../assets/portfolio/portfolio-cristian-desktop.png";
-import project2 from "../assets/portfolio/the-trickets.png";
-import project3 from "../assets/portfolio/ask-and-create.png";
-import project4 from "../assets/portfolio/retos-front-end.png";
 
 const projects = [
   {
-    title: "Cristian Parra",
-    desc: "Desarrollo de tienda en línea con WordPress y WooCommerce, implementando un filtro de productos personalizado con jQuery.",
-    devstack: "Next.js, JavaScript, Tailwind CSS, Framer Motion",
-    link: "https://cristian-parra.vercel.app/",
+    title: "Food4Fitness",
+    desc: "Plugin WooCommerce completo para meal prep: custom meal builder, cálculo nutricional y checkout a medida.",
+    impact: "Sistema de delivery con zonas y reglas avanzadas.",
+    devstack: "WordPress, WooCommerce, PHP, JavaScript",
+    link: "",
     git: "",
-    src: project,
+    private: true,
   },
   {
-    title: "The Trickest",
-    desc: "Plataforma innovadora para salud dietética con blog multi-autor y funcionalidades de ecommerce.",
-    devstack: "Next.js, JavaScript, Tailwind CSS",
-    link: "https://the-trickest.vercel.app/",
-    git: "https://github.com/JonathanVargas0111/the-trickest",
-    src: project2,
+    title: "WebStark.com.au",
+    desc: "Sitio corporativo headless con Next.js 15 + WordPress GraphQL.",
+    impact: "Generación estática + SEO técnico con JSON-LD y sitemaps.",
+    devstack: "Next.js 15, React 19, GraphQL, TypeScript",
+    link: "https://webstark.com.au/",
+    git: "",
   },
   {
-    title: "Ask and Create",
-    desc: "Desarrollo de sitio web empresarial responsivo con animaciones personalizadas en jQuery.",
-    devstack: "Next.js, TypeScript, Tailwind CSS, React, NextUI",
-    link: "https://askncreate.vercel.app/",
-    git: "https://github.com/JonathanVargas0111/askandcreate",
-    src: project3,
+    title: "MX Modules",
+    desc: "Marketing site SaaS con blog técnico en MDX.",
+    impact: "Arquitectura de contenidos escalable.",
+    devstack: "Next.js, MDX, Tailwind CSS, SEO",
+    link: "",
+    git: "",
+    private: true,
   },
   {
-    title: "Retos Frontend Mentor",
-    desc: "Aplicación de rifa con Next.js y Tailwind CSS, donde los usuarios pueden comprar boletos y un ganador es seleccionado aleatoriamente.",
-    devstack: "HTML, CSS, JavaScript",
-    link: "https://jonathanvargas0111.github.io/retos-frontend-mentor/",
-    git: "https://github.com/JonathanVargas0111/retos-frontend-mentor",
-    src: project4,
+    title: "Nandark",
+    desc: "Sitio de servicios de desarrollo y automatización.",
+    impact: "Marca y posicionamiento para captar leads B2B.",
+    devstack: "Next.js, Tailwind CSS, UX Writing",
+    link: "https://nandark.com/",
+    git: "",
   },
+  {
+    title: "Johanna Skincare",
+    desc: "Web para cliente con enfoque en estética, confianza y conversión.",
+    impact: "Flujo de contenido optimizado para reservas y contacto.",
+    devstack: "Next.js, Tailwind CSS, Animaciones",
+    link: "https://johanna-skincare.vercel.app/",
+    git: "",
+  },
+  {
+    title: "TechHub",
+    desc: "Ecommerce de tecnología con grid de productos, categorías y carrito.",
+    impact: "UI responsive optimizada para mobile + desktop.",
+    devstack: "Next.js, TypeScript, Tailwind CSS",
+    link: "https://techhub-alpha.vercel.app/",
+    git: "https://github.com/JonathanVargas0111/techhub",
+  }
 ];
 
 const Portfolio = () => {
   return (
-    <div className="w-full px-2 pt-10 text-gray-900 dark:text-white md:pt-10">
+    <div className="w-full px-2 pt-10 text-[var(--ink)] md:pt-10">
       <div
-        className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2"
+        className="mx-auto grid grid-cols-1 gap-8 lg:grid-cols-2"
         itemProp="mainEntity"
         itemScope
         itemType="http://schema.org/Project"
@@ -58,56 +71,35 @@ const Portfolio = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden transition-all duration-300 border border-gray-300 group bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-900/80 dark:to-gray-800/50 dark:border-gray-800 rounded-2xl hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20"
+            className="group relative overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--card)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-[var(--shadow)]"
             itemProp="itemListElement"
             itemScope
             itemType="http://schema.org/CreativeWork"
             role="listitem"
           >
-            {/* Imagen con efecto hover */}
-            <div className="relative overflow-hidden" itemProp="image" itemScope itemType="https://schema.org/ImageObject">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Visitar el proyecto ${project.title}`}
-              >
-                <div className="relative overflow-hidden">
-                  <Image
-                    src={project.src}
-                    alt={`Vista previa del proyecto ${project.title} desarrollado por Felipe Vargas - ${project.devstack}`}
-                    width={600}
-                    height={400}
-                    className="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-110"
-                    itemProp="contentUrl"
-                    loading="lazy"
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                  />
-                  {/* Overlay oscuro al hacer hover */}
-                  <div className="absolute inset-0 transition-opacity duration-300 bg-gradient-to-t from-gray-900 via-transparent to-transparent dark:from-gray-900 dark:via-transparent dark:to-transparent opacity-60 group-hover:opacity-80"></div>
-                </div>
-                <meta itemProp="author" content="Felipe Vargas" />
-              </a>
+            <div className="relative border-b border-[var(--line)] bg-[var(--card)]">
+              <div className="flex items-center justify-between px-6 py-4 text-[10px] uppercase tracking-[0.3em] text-[var(--ink-muted)]">
+                <span>Proyecto</span>
+                {project.private && <span>Privado</span>}
+              </div>
+              <div className="h-[2px] w-16 bg-[var(--accent)] ml-6 mb-4"></div>
             </div>
 
-            {/* Contenido del proyecto */}
             <div className="p-6" itemProp="about">
-              <h3 itemProp="name" className="mb-3 text-2xl font-bold text-gray-900 transition-colors duration-300 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+              <h3 itemProp="name" className="mb-3 text-2xl font-semibold text-[var(--ink)] transition-colors duration-300 group-hover:text-[var(--accent)]">
                 {project.title}
               </h3>
 
-              <p itemProp="description" className="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+              <p itemProp="description" className="mb-4 text-sm leading-relaxed text-[var(--ink-muted)]">
                 {project.desc}
-                <span className="hidden" itemProp="keywords">{project.devstack}</span>
               </p>
+              <p className="text-sm font-medium text-[var(--ink)]">{project.impact}</p>
 
-              {/* Tech stack pills */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-4 mt-4">
                 {project.devstack.split(', ').map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 text-xs font-medium text-blue-800 bg-blue-100 border border-blue-300 rounded-full dark:bg-blue-950/30 dark:border-blue-500/30 dark:text-blue-400"
+                    className="rounded-full border border-[var(--line)] px-3 py-1 text-xs font-medium text-[var(--ink)]"
                   >
                     {tech}
                   </span>
@@ -118,15 +110,14 @@ const Portfolio = () => {
                 {project.devstack}
               </div>
 
-              {/* Links con botones mejorados */}
-              <div className="flex gap-3 mt-6" itemProp="mainEntityOfPage" itemScope itemType="https://schema.org/WebPage">
+              <div className="mt-6 flex flex-wrap gap-3" itemProp="mainEntityOfPage" itemScope itemType="https://schema.org/WebPage">
                 {project.link && (
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     itemProp="url"
-                    className="flex-1 px-4 py-2 text-sm font-medium text-center text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105"
+                    className="flex-1 rounded-full bg-[var(--ink)] px-4 py-2 text-center text-xs font-semibold uppercase tracking-[0.2em] text-[var(--page-bg)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow)]"
                     aria-label={`Demo del proyecto ${project.title} por Felipe Vargas`}
                   >
                     <span itemProp="name">Ver Demo</span>
@@ -138,11 +129,16 @@ const Portfolio = () => {
                     itemProp="codeRepository"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 px-4 py-2 text-sm font-medium text-center text-gray-300 transition-all duration-300 border-2 border-gray-700 rounded-lg hover:border-blue-500 hover:text-white"
+                    className="flex-1 rounded-full border border-[var(--line)] px-4 py-2 text-center text-xs font-semibold uppercase tracking-[0.2em] text-[var(--ink)] transition-all duration-300 hover:border-[var(--accent)] hover:text-[var(--accent)]"
                     aria-label={`Código fuente del proyecto ${project.title} por Felipe Vargas`}
                   >
                     <span itemProp="name">GitHub</span>
                   </a>
+                )}
+                {!project.link && !project.git && (
+                  <span className="rounded-full border border-[var(--line)] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--ink-muted)]">
+                    Caso privado
+                  </span>
                 )}
               </div>
             </div>

@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <section
       id="section-contact"
-      className="relative flex flex-col w-full gap-8 py-20 text-gray-100 lg:flex-row lg:items-center lg:min-h-screen"
+      className="relative flex w-full flex-col gap-8 py-20 text-[var(--ink)] lg:flex-row lg:items-center"
       itemScope
       itemType="https://schema.org/ContactPage"
       aria-label="Sección de contacto de Felipe Vargas"
@@ -53,8 +53,7 @@ const Contact = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ContactPoint",
-          "email": "tu-email@dominio.com",
-          "contactType": "Soporte técnico",
+          "contactType": "Contacto profesional",
           "areaServed": "Global",
           "availableLanguage": "Spanish",
           "url": "https://felipevargas.vercel.app/#section-contact"
@@ -62,7 +61,7 @@ const Contact = () => {
       </script>
 
       {/* Gradiente decorativo */}
-      <div className="absolute right-0 rounded-full top-1/2 w-72 h-72 bg-purple-500/5 blur-3xl -z-10"></div>
+      <div className="absolute right-0 top-1/2 -z-10 h-72 w-72 rounded-full bg-[rgba(255,95,46,0.08)] blur-3xl"></div>
 
       <ToastContainer />
 
@@ -72,13 +71,13 @@ const Contact = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className='w-full mb-6 text-left lg:w-2/5 lg:text-right'
+        className='w-full mb-6 text-left lg:w-2/5'
       >
-        <h2 className="text-5xl md:text-[8vw] lg:text-[6vw] font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent" itemProp="name">
+        <h2 className="font-display text-5xl font-semibold text-[var(--ink)] md:text-[8vw] lg:text-[5vw]" itemProp="name">
           Contacto
         </h2>
-        <div className="w-24 h-1 mt-4 bg-gradient-to-r from-blue-600 to-purple-600 lg:ml-auto"></div>
-        <p className="mt-6 text-base text-gray-400 lg:text-right">
+        <div className="mt-4 h-1 w-24 bg-[var(--accent)]"></div>
+        <p className="mt-6 text-base text-[var(--ink-muted)]">
           ¿Tienes un proyecto en mente? Hablemos
         </p>
       </motion.div>
@@ -92,16 +91,16 @@ const Contact = () => {
       >
         <form
           onSubmit={formik.handleSubmit}
-          className="flex flex-col w-full max-w-md p-8 mx-auto border border-gray-800 lg:mx-0 bg-gradient-to-br from-gray-900/50 to-gray-800/30 rounded-2xl backdrop-blur-sm"
+          className="flex w-full max-w-md flex-col rounded-3xl border border-[var(--line)] bg-[var(--card)] p-8 shadow-[var(--shadow)] lg:mx-0"
           itemScope
           itemType="https://schema.org/ContactForm"
         >
           <div className="mb-6">
-            <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label htmlFor="name" className="mb-2 block text-sm font-medium text-[var(--ink-muted)]">
               Nombre completo
             </label>
             <input
-              className="w-full px-4 py-3 text-gray-900 transition-all duration-300 border-2 border-gray-300 rounded-lg dark:text-white bg-gray-50 dark:bg-gray-900/50 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full rounded-2xl border border-[var(--line)] bg-transparent px-4 py-3 text-[var(--ink)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--accent-2)]"
               id="name"
               type="text"
               name="name"
@@ -113,18 +112,18 @@ const Contact = () => {
               itemProp="name"
             />
             {formik.touched.name && formik.errors.name && (
-              <p className="mt-2 text-sm text-red-400" role="alert">
+              <p className="mt-2 text-sm text-red-500" role="alert">
                 {formik.errors.name}
               </p>
             )}
           </div>
 
           <div className="mb-6">
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label htmlFor="email" className="mb-2 block text-sm font-medium text-[var(--ink-muted)]">
               Correo electrónico
             </label>
             <input
-              className="w-full px-4 py-3 text-gray-900 transition-all duration-300 border-2 border-gray-300 rounded-lg dark:text-white dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full rounded-2xl border border-[var(--line)] bg-transparent px-4 py-3 text-[var(--ink)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--accent-2)]"
               id="email"
               type="email"
               name="email"
@@ -136,19 +135,19 @@ const Contact = () => {
               itemProp="email"
             />
             {formik.touched.email && formik.errors.email && (
-              <p className="mt-2 text-sm text-red-400" role="alert">
+              <p className="mt-2 text-sm text-red-500" role="alert">
                 {formik.errors.email}
               </p>
             )}
           </div>
 
           <div className="mb-6">
-            <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label htmlFor="message" className="mb-2 block text-sm font-medium text-[var(--ink-muted)]">
               Mensaje
             </label>
             <textarea
               rows="6"
-              className="w-full px-4 py-3 text-gray-900 dark:text-white transition-all duration-300 border-2 border-gray-300 dark:border-gray-700 rounded-lg resize-none bg-gray-50 dark:bg-gray-900/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full resize-none rounded-2xl border border-[var(--line)] bg-transparent px-4 py-3 text-[var(--ink)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--accent-2)]"
               id="message"
               name="message"
               placeholder="Escribe tu mensaje aquí..."
@@ -160,7 +159,7 @@ const Contact = () => {
               itemProp="message"
             />
             {formik.touched.message && formik.errors.message && (
-              <p className="mt-2 text-sm text-red-400" role="alert">
+              <p className="mt-2 text-sm text-red-500" role="alert">
                 {formik.errors.message}
               </p>
             )}
@@ -169,7 +168,7 @@ const Contact = () => {
           <div className="flex flex-col items-center gap-4 mt-4 sm:flex-row">
             <button
               type="submit"
-              className="flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-300 rounded-lg sm:flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex w-full items-center justify-center rounded-full bg-[var(--ink)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--page-bg)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow)] disabled:cursor-not-allowed disabled:opacity-50 sm:flex-1"
               disabled={formik.isSubmitting}
               aria-live="polite"
             >
@@ -183,7 +182,7 @@ const Contact = () => {
               )}
             </button>
 
-            <span className="text-gray-500">o</span>
+            <span className="text-[var(--ink-muted)]">o</span>
 
             <WhatsAppButton />
           </div>

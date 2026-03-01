@@ -27,22 +27,22 @@ const SocialLinks = () => {
         },
         {
             id: 4,
-            label: "Resume",
+            label: "CV",
             icon: <BsFillPersonLinesFill size={30} />,
-            href: "/CV_jonathan_vargas.pdf",
+            href: "/CV_Felipe_Vargas_Desarrollador_Full_Stack.pdf",
             style: "rounded-br-md",
             download: true,
         },
     ];
 
     return (
-        <aside className="hidden lg:flex flex-col top-[35%] left-0 fixed z-50">
+        <aside className="fixed left-0 top-[35%] z-50 hidden flex-col lg:flex">
             <ul>
                 {links.map(({ id, label, icon, href, style, download }) => (
-                    <li key={id} className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-200/80 dark:bg-gray-800/80 hover:bg-gray-300 dark:hover:bg-gray-700 backdrop-blur-sm border border-gray-300 dark:border-gray-600 ${style}`}>
+                    <li key={id} className={`flex h-14 w-40 items-center justify-between border border-[var(--line)] bg-[var(--card)] px-4 duration-300 hover:ml-[-10px] hover:rounded-md hover:border-[var(--accent)] hover:shadow-[var(--shadow)] ml-[-100px] ${style}`}>
                         <Link
                             href={href}
-                            className="flex items-center justify-between w-full text-gray-900 dark:text-white"
+                            className="flex w-full items-center justify-between text-[var(--ink)]"
                             target="_blank"
                             rel="noopener noreferrer"
                             download={download}

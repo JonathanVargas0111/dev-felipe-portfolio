@@ -4,9 +4,9 @@ import Head from "next/head";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Felipe Vargas | Desarrollador Full Stack Freelance - React & Next.js Expert",
-  description: "Desarrollador web con 3+ años de experiencia. Especializado en React, Next.js y soluciones freelance para startups. Contrata a Felipe Vargas para tu próximo proyecto web.",
-  keywords: "Felipe Vargas, desarrollador web, freelance, frontend developer, full stack, React, Next.js, JavaScript, TypeScript, portafolio Felipe Vargas, contratar desarrollador web",
+  title: "Felipe Vargas | Full-Stack Developer + Automatización",
+  description: "Ingeniero de Sistemas y Full-Stack Developer. Desarrollo web, ecommerce y automatización con enfoque en performance, SEO y conversión.",
+  keywords: "Felipe Vargas, desarrollador web, full stack, automatización, Next.js, React, WordPress, WooCommerce, TypeScript, portafolio",
   applicationName: "Felipe Vargas Portfolio",
   authors: [{ 
     name: "Felipe Vargas", 
@@ -18,8 +18,8 @@ export const metadata = {
     bing: process.env.NEXT_PUBLIC_BING_VERIFICATION || "TU_CODIGO_BING"
   },
   openGraph: {
-    title: "Felipe Vargas - Desarrollador Full Stack Freelance | React & Next.js",
-    description: "Portafolio profesional de Felipe Vargas. Desarrollo aplicaciones web rápidas y SEO-friendly con tecnologías modernas.",
+    title: "Felipe Vargas - Full-Stack Developer + Automatización",
+    description: "Portafolio profesional: desarrollo web, ecommerce y automatización con foco en performance y SEO.",
     url: "https://felipevargas.vercel.app/",
     siteName: "Felipe Vargas Portfolio",
     images: [
@@ -37,8 +37,8 @@ export const metadata = {
     card: "summary_large_image",
     site: "@felipevargasx_",
     creator: "@felipevargasx_",
-    title: "Felipe Vargas | Desarrollador Full Stack Freelance",
-    description: "Construyo soluciones web escalables con React y Next.js. Echa un vistazo a mi portafolio.",
+    title: "Felipe Vargas | Full-Stack + Automatización",
+    description: "Construyo soluciones web y automatizaciones con Next.js, WordPress y WooCommerce.",
     images: ["https://felipevargas.vercel.app/img/bg-felipevargas.png"],
   },
   icons: {
@@ -84,37 +84,44 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://felipevargas.vercel.app/"
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Felipe Vargas",
-    "jobTitle": "Desarrollador Full Stack Freelance",
-    "url": "https://felipevargas.vercel.app/",
+    "jobTitle": "Full-Stack Developer & Automation Specialist",
+    "url": baseUrl,
     "sameAs": [
       "https://www.linkedin.com/in/felipevargasarias/",
-      "https://github.com/JonathanVargas0111", // Recomendado cambiar a github.com/felipevargas
+      "https://github.com/JonathanVargas0111",
       "https://twitter.com/felipevargasx_",
       "https://medium.com/@Felipevargasx"
     ],
-    "description": "Desarrollador web especializado en React, Next.js y TypeScript con experiencia en proyectos freelance para startups internacionales.",
-    "image": "https://felipevargas.vercel.app/img/bg-felipevargas.png",
+    "description": "Ingeniero de Sistemas y Full-Stack Developer enfocado en desarrollo web, ecommerce y automatización.",
+    "image": `${baseUrl}/img/bg-felipevargas.png`,
     "alumniOf": {
       "@type": "EducationalOrganization",
-      "name": "Universidad de referencia" // Actualiza con tu formación real
+      "name": "Universidad Distrital Francisco José de Caldas"
     },
     "knowsAbout": [
       "React",
       "Next.js",
       "TypeScript",
-      "Frontend Development",
-      "Backend Development",
-      "AWS",
-      "SEO Técnico"
+      "WordPress",
+      "WooCommerce",
+      "Docker",
+      "SEO Técnico",
+      "Automatización"
     ],
     "hasOccupation": {
       "@type": "Occupation",
       "name": "Desarrollador Full Stack",
-      "skills": "JavaScript, React, Node.js"
+      "skills": "JavaScript, React, Next.js, WordPress, WooCommerce, Automation"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Nandark",
+      "url": "https://nandark.com/"
     }
   };
 
@@ -122,12 +129,49 @@ export default function RootLayout({ children }) {
     <html lang="es" dir="ltr" itemScope itemType="http://schema.org/WebPage">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://felipevargas.vercel.app/" />
+        <link rel="canonical" href={baseUrl} />
         <meta name="bingbot" content="index, follow" />
         
         {/* Datos estructurados principales */}
         <script type="application/ld+json">
           {JSON.stringify(structuredData, null, 2)}
+        </script>
+
+        {/* Organización (Nandark) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Nandark",
+            "url": "https://nandark.com/",
+            "founder": {
+              "@type": "Person",
+              "name": "Felipe Vargas"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/felipevargasarias/"
+            ]
+          }, null, 2)}
+        </script>
+
+        {/* Servicios */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Desarrollo web y automatización",
+            "provider": {
+              "@type": "Person",
+              "name": "Felipe Vargas"
+            },
+            "areaServed": "Worldwide",
+            "serviceType": [
+              "Desarrollo web",
+              "Ecommerce",
+              "Automatización"
+            ],
+            "url": baseUrl
+          }, null, 2)}
         </script>
 
         {/* Datos para Bing/OpenAI */}
@@ -136,10 +180,10 @@ export default function RootLayout({ children }) {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Portafolio de Felipe Vargas",
-            "url": "https://felipevargas.vercel.app/",
+            "url": baseUrl,
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://felipevargas.vercel.app/?q={search_term_string}",
+              "target": `${baseUrl}?q={search_term_string}`,
               "query-input": "required name=search_term_string"
             }
           }, null, 2)}

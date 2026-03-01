@@ -19,7 +19,7 @@ const linksEn = [
   {
     id: 4,
     idSection: "skills",
-    titleBtn: "skills"
+    titleBtn: "habilidades"
   },
   /* {
     id: 5,
@@ -52,7 +52,7 @@ const linksEs = [
   {
     id: 4,
     idSection: "skills",
-    titleBtn: "skills"
+    titleBtn: "habilidades"
   },
   /* {
     id: 5,

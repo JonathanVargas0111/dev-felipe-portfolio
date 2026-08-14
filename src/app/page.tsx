@@ -13,17 +13,13 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-dark-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 font-sans selection:bg-cyan-500/20 selection:text-cyan-400">
+    <div className="min-h-screen bg-page-light dark:bg-page-dark text-slate-950 dark:text-ink-primary transition-colors duration-300 font-sans selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black editorial-grain">
       
-      {/* Navigation Header */}
+      {/* Navigation */}
       <Navbar />
 
-      {/* Main Content Sections */}
-      <main className="relative overflow-hidden">
-        
-        {/* Subtle Global Background Mesh Pattern */}
-        <div className="fixed inset-0 bg-grid-pattern pointer-events-none -z-20 opacity-70 dark:opacity-30" />
-
+      {/* Main Content Layout */}
+      <main className="relative">
         <HeroSection />
         <AboutSection />
         <ExperienceTimeline />

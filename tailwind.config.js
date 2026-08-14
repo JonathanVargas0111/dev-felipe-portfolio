@@ -11,32 +11,24 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        editorial: ['"Instrument Serif"', 'Georgia', 'serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       colors: {
-        dark: {
-          950: '#06080d',
-          900: '#0c1017',
-          850: '#10151f',
-          800: '#161c28',
-          700: '#232b3c',
-          600: '#334155',
+        page: {
+          light: '#fbfbfd',
+          dark: '#0b0d12',
         },
-        cyan: {
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
+        surface: {
+          light: '#ffffff',
+          dark: '#10131a',
+          elevated: '#161a24',
         },
-        emerald: {
-          400: '#34d399',
-          500: '#10b981',
-          600: '#059669',
+        ink: {
+          primary: '#f4f5f8',
+          secondary: '#9ba1b0',
+          muted: '#5c6375',
         },
-      },
-      boxShadow: {
-        'glow-cyan': '0 0 40px -10px rgba(56, 189, 248, 0.3)',
-        'glow-emerald': '0 0 40px -10px rgba(52, 211, 153, 0.3)',
-        'glow-amber': '0 0 40px -10px rgba(251, 191, 36, 0.25)',
       },
     },
   },

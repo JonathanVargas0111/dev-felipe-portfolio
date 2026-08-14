@@ -3,8 +3,8 @@ import './globals.css';
 import Providers from './store/provider';
 
 export const metadata: Metadata = {
-  title: 'Felipe Vargas Arias | Full-Stack Engineer & Automation Specialist',
-  description: 'Systems Engineer & Full-Stack Developer with ~2,500 commits in production at Web Stark. Specialized in Next.js 15, WooCommerce enterprise plugins, Model Context Protocol (MCP) and AI search optimization (AEO).',
+  title: 'Felipe Vargas Arias — Full-Stack & Systems Engineer',
+  description: 'Systems Engineer & Full-Stack Developer with ~2,500 commits in production at Web Stark. Specializing in Next.js 15, WooCommerce enterprise plugins, Model Context Protocol (MCP) and AI search optimization (AEO).',
   keywords: [
     'Felipe Vargas',
     'Felipe Vargas Arias',
@@ -31,15 +31,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_ES',
     url: 'https://felipevargas.vercel.app/',
-    siteName: 'Felipe Vargas Arias — Full-Stack Engineer',
-    title: 'Felipe Vargas Arias | Full-Stack Engineer & Automation Specialist',
+    siteName: 'Felipe Vargas Arias — Full-Stack & Systems Engineer',
+    title: 'Felipe Vargas Arias — Full-Stack & Systems Engineer',
     description: 'Systems Engineer with ~2,500 commits across 11 production codebases. Next.js 15, WooCommerce engines, and AI automation.',
     images: [
       {
         url: '/img/bg-felipevargas.png',
         width: 1200,
         height: 630,
-        alt: 'Felipe Vargas Arias - Full-Stack Developer Portfolio',
+        alt: 'Felipe Vargas Arias — Portfolio',
       },
     ],
   },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@felipevargasx_',
     creator: '@felipevargasx_',
-    title: 'Felipe Vargas Arias | Full-Stack Engineer & Automation Specialist',
+    title: 'Felipe Vargas Arias — Full-Stack & Systems Engineer',
     description: 'Systems Engineer with ~2,500 commits in production. Next.js 15, WooCommerce engines, and AI automation.',
     images: ['/img/bg-felipevargas.png'],
   },
@@ -89,7 +89,7 @@ export default function RootLayout({
     ],
     alumniOf: {
       '@type': 'EducationalOrganization',
-      'name': 'Corporación Universitaria Minuto de Dios (UNIMINUTO)',
+      name: 'Corporación Universitaria Minuto de Dios (UNIMINUTO)',
     },
   };
 
@@ -115,7 +115,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="bg-slate-50 dark:bg-dark-950 text-slate-900 dark:text-slate-100 min-h-screen antialiased">
+      <body className="bg-page-light dark:bg-page-dark text-slate-950 dark:text-ink-primary min-h-screen antialiased">
         <Providers>
           {children}
         </Providers>

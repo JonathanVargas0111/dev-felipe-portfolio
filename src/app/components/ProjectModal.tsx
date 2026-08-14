@@ -6,12 +6,8 @@ import { translations } from '../../data/translations';
 import { 
   X, 
   ExternalLink, 
-  Building2, 
-  ShieldAlert, 
-  CheckCircle, 
-  Cpu, 
-  Layers, 
-  Lock
+  Lock,
+  ArrowRight
 } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa6';
 
@@ -46,74 +42,69 @@ export default function ProjectModal({ project, lang, onClose }: ProjectModalPro
       {/* Backdrop */}
       <div 
         onClick={onClose} 
-        className="fixed inset-0 bg-black/70 backdrop-blur-md transition-opacity animate-in fade-in duration-200"
+        className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity animate-in fade-in duration-200"
       />
 
       {/* Modal Dialog */}
-      <div className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-dark-900 rounded-3xl border border-slate-200 dark:border-white/[0.1] shadow-2xl overflow-y-auto z-10 animate-in zoom-in-95 duration-200 text-slate-800 dark:text-slate-200">
+      <div className="relative w-full max-w-4xl max-h-[90vh] bg-surface-light dark:bg-surface-dark rounded-3xl border border-black/[0.12] dark:border-white/[0.12] shadow-2xl overflow-y-auto z-10 animate-in zoom-in-95 duration-200 text-slate-800 dark:text-slate-200 font-sans">
         
         {/* Modal Header */}
-        <div className="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-white/90 dark:bg-dark-900/90 backdrop-blur-md border-b border-slate-200 dark:border-white/[0.08]">
-          <div className="flex items-center gap-3">
+        <div className="sticky top-0 z-20 flex items-center justify-between px-6 sm:px-8 py-4 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md border-b border-black/[0.06] dark:border-white/[0.06]">
+          <div className="flex items-center gap-3 text-xs font-mono">
             {isWebStark ? (
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/20">
-                <Building2 className="w-3.5 h-3.5" />
-                Web Stark (Sydney) · {project.company?.role}
+              <span className="text-amber-700 dark:text-amber-400 font-semibold">
+                [ WEB STARK · COMPANY PROJECT ]
               </span>
             ) : (
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20">
-                <Cpu className="w-3.5 h-3.5" />
-                {translations[lang].projects.personalTag}
+              <span className="text-slate-700 dark:text-slate-300 font-semibold">
+                [ NANDARK LAB · PERSONAL RESEARCH ]
               </span>
             )}
-            <span className="text-xs font-mono text-slate-400 hidden sm:inline">
-              {project.year}
+            <span className="text-slate-400 hidden sm:inline">
+              // {project.period || project.year}
             </span>
           </div>
 
           <button
             onClick={onClose}
-            className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-colors"
+            className="p-1.5 rounded border border-black/10 dark:border-white/10 hover:bg-black/[0.04] dark:hover:bg-white/[0.06] text-slate-500 transition-colors"
             aria-label={t.close}
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 sm:p-8 space-y-8">
+        <div className="p-6 sm:p-10 space-y-8">
           
           {/* Title & Subtitle */}
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
+          <div className="space-y-1">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-950 dark:text-white tracking-tight">
               {project.title}
             </h2>
-            <p className="text-sm sm:text-base font-medium text-cyan-600 dark:text-cyan-400 mt-1">
+            <p className="font-editorial italic text-2xl text-slate-600 dark:text-slate-400">
               {project.subtitle}
             </p>
           </div>
 
-          {/* Company Ownership Disclaimer Note (if Web Stark) */}
+          {/* Company Ownership Note (if Web Stark) */}
           {isWebStark && (
-            <div className="p-4 rounded-xl bg-amber-500/[0.08] dark:bg-amber-400/[0.06] border border-amber-500/20 text-xs text-amber-800 dark:text-amber-200 flex items-start gap-3">
-              <ShieldAlert className="w-5 h-5 flex-shrink-0 text-amber-600 dark:text-amber-400 mt-0.5" />
-              <p>
-                <strong>Nota de Atribución:</strong> Este proyecto pertenece a la compañía <strong>Web Stark</strong> y a su respectivo cliente. El código fuente es privado. En esta ficha se describen los aportes de ingeniería, arquitectura de software y métricas técnicas realizadas por Felipe Vargas.
+            <div className="p-4 rounded-xl border border-amber-500/20 bg-amber-500/[0.04] text-xs text-amber-900 dark:text-amber-300 space-y-1 font-mono">
+              <div className="font-bold uppercase">[ INTELLECTUAL PROPERTY NOTICE ]</div>
+              <p className="font-sans leading-relaxed text-slate-600 dark:text-slate-400">
+                This platform is proprietary to <strong>Web Stark Pty Ltd</strong> and its clients. Source code is closed. This technical documentation highlights Felipe Vargas&apos;s direct code contributions, architecture design, and system leadership.
               </p>
             </div>
           )}
 
-          {/* Metrics Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {/* Metrics Ledger Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/[0.05] dark:border-white/[0.05]">
             {project.metrics.map((metric) => (
-              <div 
-                key={metric.label} 
-                className="p-3.5 rounded-xl bg-slate-50 dark:bg-dark-850 border border-slate-200 dark:border-white/[0.06] text-center"
-              >
-                <div className="text-lg font-bold font-mono text-cyan-600 dark:text-cyan-400">
+              <div key={metric.label} className="space-y-0.5">
+                <div className="text-xl font-bold font-mono text-slate-950 dark:text-white">
                   {metric.value}
                 </div>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
+                <div className="text-[10px] font-mono uppercase text-slate-500 dark:text-slate-400">
                   {metric.label}
                 </div>
               </div>
@@ -122,29 +113,29 @@ export default function ProjectModal({ project, lang, onClose }: ProjectModalPro
 
           {/* Overview */}
           <div className="space-y-2">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400">
-              {t.overview}
-            </h3>
-            <p className="text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+            <span className="text-xs font-mono uppercase tracking-wider text-slate-400">
+              // 01 SYSTEM OVERVIEW
+            </span>
+            <p className="text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300 font-normal">
               {project.overview[lang]}
             </p>
           </div>
 
           {/* Challenge & Solution Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-5 rounded-2xl bg-red-500/[0.04] dark:bg-red-500/[0.06] border border-red-500/20 space-y-2">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-red-600 dark:text-red-400 font-semibold flex items-center gap-1.5">
-                <span>{t.challenge}</span>
-              </h4>
+            <div className="p-5 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.01] dark:bg-white/[0.01] space-y-2">
+              <span className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold">
+                02. THE TECHNICAL CHALLENGE
+              </span>
               <p className="text-xs sm:text-sm leading-relaxed text-slate-700 dark:text-slate-300">
                 {project.challenge[lang]}
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-emerald-500/[0.04] dark:bg-emerald-500/[0.06] border border-emerald-500/20 space-y-2">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold flex items-center gap-1.5">
-                <span>{t.solution}</span>
-              </h4>
+            <div className="p-5 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.01] dark:bg-white/[0.01] space-y-2">
+              <span className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold">
+                03. ENGINEERING SOLUTION
+              </span>
               <p className="text-xs sm:text-sm leading-relaxed text-slate-700 dark:text-slate-300">
                 {project.solution[lang]}
               </p>
@@ -153,13 +144,13 @@ export default function ProjectModal({ project, lang, onClose }: ProjectModalPro
 
           {/* Key Features */}
           <div className="space-y-3">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400">
-              {t.keyFeatures}
-            </h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <span className="text-xs font-mono uppercase tracking-wider text-slate-400">
+              // 04 KEY CAPABILITIES & FEATURES
+            </span>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {project.keyFeatures[lang].map((feature, i) => (
                 <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-                  <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-400 font-mono mt-0.5">[{i + 1}]</span>
                   <span>{feature}</span>
                 </li>
               ))}
@@ -168,13 +159,13 @@ export default function ProjectModal({ project, lang, onClose }: ProjectModalPro
 
           {/* Architecture Highlights */}
           <div className="space-y-3">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400">
-              {t.architecture}
-            </h3>
-            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-dark-850 border border-slate-200 dark:border-white/[0.06] space-y-2.5">
+            <span className="text-xs font-mono uppercase tracking-wider text-slate-400">
+              // 05 ARCHITECTURAL DECISIONS
+            </span>
+            <div className="p-4 rounded-xl border border-black/[0.06] dark:border-white/[0.06] space-y-2.5">
               {project.architectureHighlights[lang].map((arch, i) => (
                 <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-                  <Layers className="w-4 h-4 text-cyan-500 flex-shrink-0 mt-0.5" />
+                  <span className="font-mono text-slate-400">§</span>
                   <span>{arch}</span>
                 </div>
               ))}
@@ -183,14 +174,14 @@ export default function ProjectModal({ project, lang, onClose }: ProjectModalPro
 
           {/* Technologies Stack */}
           <div className="space-y-3">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400">
-              {t.technologies}
-            </h3>
-            <div className="flex flex-wrap gap-2">
+            <span className="text-xs font-mono uppercase tracking-wider text-slate-400">
+              // 06 APPLIED STACK
+            </span>
+            <div className="flex flex-wrap gap-1.5">
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 rounded-lg bg-slate-100 dark:bg-white/[0.06] text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-white/[0.08] text-xs font-mono"
+                  className="px-2.5 py-1 rounded text-xs font-mono bg-black/[0.03] dark:bg-white/[0.04] text-slate-800 dark:text-slate-200 border border-black/[0.06] dark:border-white/[0.06]"
                 >
                   {tech}
                 </span>
@@ -198,18 +189,18 @@ export default function ProjectModal({ project, lang, onClose }: ProjectModalPro
             </div>
           </div>
 
-          {/* Action Links */}
-          <div className="pt-4 border-t border-slate-200 dark:border-white/[0.08] flex flex-wrap items-center justify-between gap-4">
+          {/* Actions Footer */}
+          <div className="pt-6 border-t border-black/[0.06] dark:border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               {project.links.live && (
                 <a
                   href={project.links.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold shadow-md transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-950 dark:bg-white text-white dark:text-slate-950 text-xs font-mono font-semibold hover:opacity-90 transition-opacity"
                 >
-                  <ExternalLink className="w-4 h-4" />
-                  <span>{translations[lang].projects.viewLiveDemo}</span>
+                  <span>LIVE SITE</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               )}
 
@@ -218,10 +209,10 @@ export default function ProjectModal({ project, lang, onClose }: ProjectModalPro
                   href={project.links.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-black/10 dark:border-white/15 text-slate-800 dark:text-slate-200 text-xs font-mono hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
                 >
-                  <ExternalLink className="w-4 h-4" />
-                  <span>{translations[lang].projects.viewLiveDemo}</span>
+                  <span>DEMO LINK</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               )}
 
@@ -230,26 +221,25 @@ export default function ProjectModal({ project, lang, onClose }: ProjectModalPro
                   href={project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-white/[0.1] hover:bg-slate-100 dark:hover:bg-white/[0.05] text-slate-700 dark:text-slate-200 text-xs font-semibold transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-black/10 dark:border-white/15 text-slate-800 dark:text-slate-200 text-xs font-mono hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
                 >
-                  <FaGithub className="w-4 h-4" />
-                  <span>{translations[lang].projects.viewSource}</span>
+                  <FaGithub className="w-3.5 h-3.5" />
+                  <span>GITHUB</span>
                 </a>
               )}
 
               {project.links.isPrivate && (
-                <span className="inline-flex items-center gap-1.5 text-xs text-slate-500 font-mono">
-                  <Lock className="w-3.5 h-3.5" />
-                  {translations[lang].projects.privateCase}
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400">
+                  <Lock className="w-3.5 h-3.5" /> PRIVATE CODEBASE
                 </span>
               )}
             </div>
 
             <button
               onClick={onClose}
-              className="px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/10"
+              className="px-4 py-2 rounded text-xs font-mono text-slate-500 hover:text-slate-950 dark:hover:text-white"
             >
-              {t.close}
+              [ CLOSE ESC ]
             </button>
           </div>
 

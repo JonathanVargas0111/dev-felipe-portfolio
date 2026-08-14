@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 space-y-10 sm:space-y-16">
         
         {/* Editorial Top Metadata Ribbon */}
-        <div className="flex flex-wrap items-center justify-between gap-2.5 text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 border-b border-black/[0.06] dark:border-white/[0.06] pb-3 sm:pb-4">
+        <div className="flex flex-wrap items-center justify-between gap-2.5 text-xs font-mono uppercase tracking-wider text-[var(--text-dim)] border-b border-[var(--border-hairline)] pb-3 sm:pb-4">
           <div className="flex items-center gap-3">
             <span>[ BOGOTÁ / REMOTE GLOBAL ]</span>
             <span className="hidden sm:inline text-slate-300 dark:text-slate-700">/</span>
@@ -82,7 +82,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-lg bg-slate-950 dark:bg-white text-white dark:text-slate-950 text-xs font-mono font-semibold hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-slate-950 dark:bg-white text-white dark:text-slate-950 text-xs font-mono font-semibold transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-[2px] hover:shadow-lg dark:hover:shadow-white/10"
               >
                 <span>EXPLORE CASE STUDIES</span>
                 <ArrowDown className="w-3.5 h-3.5" />
@@ -90,7 +90,7 @@ export default function HeroSection() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-lg border border-black/10 dark:border-white/15 text-slate-800 dark:text-slate-200 text-xs font-mono hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-black/10 dark:border-white/15 text-slate-800 dark:text-slate-200 text-xs font-mono transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-[2px] hover:border-black/30 dark:hover:border-white/30"
               >
                 <span>INITIATE CONTACT</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -107,7 +107,7 @@ export default function HeroSection() {
                 <span className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400">
                   PRODUCTION VERIFICATION LEDGER
                 </span>
-                <span className="text-[10px] font-mono text-slate-400 dark:text-slate-500">
+                <span className="text-xs font-mono text-[var(--text-dim)]">
                   WEB STARK & LABS (2025–2026)
                 </span>
               </div>
@@ -119,7 +119,7 @@ export default function HeroSection() {
                       <div className="text-xs font-mono font-medium text-slate-700 dark:text-slate-300">
                         {m.key}
                       </div>
-                      <div className="text-[10px] sm:text-[11px] text-slate-400 dark:text-slate-500">
+                      <div className="text-xs text-[var(--text-dim)]">
                         {m.detail}
                       </div>
                     </div>
@@ -130,7 +130,7 @@ export default function HeroSection() {
                 ))}
               </div>
 
-              <div className="pt-2 border-t border-black/[0.06] dark:border-white/[0.06] flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-[10px] sm:text-[11px] font-mono text-slate-500 dark:text-slate-400">
+              <div className="pt-2 border-t border-[var(--border-hairline)] flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs font-mono text-[var(--text-dim)]">
                 <span>BENCHMARKS: ZERO RUNTIME TAMPERING</span>
                 <span>TYPE-SAFE ARCHITECTURE</span>
               </div>

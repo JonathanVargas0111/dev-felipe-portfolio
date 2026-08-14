@@ -4,19 +4,23 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../store/store';
-import { setLang, toggleTheme } from '../store/slices/settings/SettingsSlices';
+import { setLang } from '../store/slices/settings/SettingsSlices';
 import { translations } from '../../data/translations';
 import { Sun, Moon, ArrowUpRight, Menu, X } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 export default function Navbar() {
-  const { lang, theme } = useSelector((state: RootState) => state.settings);
+  const { lang } = useSelector((state: RootState) => state.settings);
   const dispatch = useDispatch();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   const t = translations[lang].nav;
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -65,7 +69,7 @@ export default function Navbar() {
               href={link.href}
               className="text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white transition-colors duration-150 flex items-baseline gap-1"
             >
-              <span className="text-[10px] text-slate-400 dark:text-slate-600">{link.index}</span>
+              <span className="text-xs text-[var(--text-dim)]">{link.index}</span>
               <span>{link.label}</span>
             </a>
           ))}
@@ -84,17 +88,19 @@ export default function Navbar() {
           </button>
 
           {/* Theme Switch */}
-          <button
-            onClick={() => dispatch(toggleTheme())}
-            className="p-1.5 rounded border border-black/10 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
-            title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
-          >
-            {theme === 'dark' ? (
-              <Sun className="w-3.5 h-3.5 text-slate-300" />
-            ) : (
-              <Moon className="w-3.5 h-3.5 text-slate-700" />
-            )}
-          </button>
+          {mounted && (
+            <button
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="p-2 sm:p-1.5 rounded border border-black/10 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
+              title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+            >
+              {theme === 'dark' ? (
+                <Sun className="w-4 h-4 sm:w-3.5 sm:h-3.5 text-slate-300" />
+              ) : (
+                <Moon className="w-4 h-4 sm:w-3.5 sm:h-3.5 text-slate-700" />
+              )}
+            </button>
+          )}
 
           {/* CV Action Link */}
           <a
@@ -110,10 +116,10 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-1.5 lg:hidden rounded border border-black/10 dark:border-white/10 text-slate-800 dark:text-slate-200"
+            className="p-2 lg:hidden rounded border border-black/10 dark:border-white/10 text-slate-800 dark:text-slate-200"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
 
         </div>
@@ -129,9 +135,9 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-xs font-mono py-1.5 text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white"
+                className="block text-sm sm:text-xs font-mono py-3 sm:py-1.5 text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white"
               >
-                <span className="text-slate-400 dark:text-slate-600 mr-1.5">{link.index}</span>
+                <span className="text-[var(--text-dim)] mr-2 sm:mr-1.5">{link.index}</span>
                 {link.label}
               </a>
             ))}

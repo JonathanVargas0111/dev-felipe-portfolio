@@ -179,22 +179,8 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="es" className="dark scroll-smooth" suppressHydrationWarning>
+    <html lang="es" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                const savedTheme = localStorage.getItem('theme');
-                if (savedTheme === 'light') {
-                  document.documentElement.classList.remove('dark');
-                } else {
-                  document.documentElement.classList.add('dark');
-                }
-              } catch (e) {}
-            `,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}

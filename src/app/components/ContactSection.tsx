@@ -21,7 +21,7 @@ export default function ContactSection() {
   const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [copiedEmail, setCopiedEmail] = useState(false);
 
-  const contactEmail = 'felipevargas.dev@gmail.com';
+  const contactEmail = 'nandarkx@gmail.com';
   const whatsappUrl = 'https://wa.me/573017897176?text=Hola%20Felipe,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto.';
 
   const validationSchema = Yup.object({

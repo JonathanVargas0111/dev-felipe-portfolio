@@ -1,53 +1,64 @@
-# Felipe Vargas Arias — Full-Stack Engineer & Automation Specialist
-Website: https://felipevargas.vercel.app/
-LinkedIn: https://www.linkedin.com/in/felipevargasarias/
-GitHub: https://github.com/JonathanVargas0111
-Twitter/X: https://twitter.com/felipevargasx_
-Personal Lab: https://nandark.com/
+# Felipe Vargas Arias — Full-Stack & Systems Engineer
 
-## Summary
-Systems Engineer (UNIMINUTO) and Full-Stack Developer with ~2,500 commits across 11 production codebases for Australian digital agency Web Stark. Specializing in Next.js 15 App Router, React 19, TypeScript, enterprise WooCommerce plugin development, Model Context Protocol (MCP), and Answer Engine Optimization (AEO/GEO).
+> Engineering high-resilience web systems, custom WooCommerce engines & AI-driven workflows.
 
-## Core Technical Competencies
-- **Frontend:** Next.js 15, React 19, TypeScript, Tailwind CSS 4, SCSS, Framer Motion, MDX, Velite.
-- **Backend & CMS:** PHP 8.2+, WordPress Custom Plugin Architecture, WooCommerce Core Customization, WHMCS API, Node.js, GraphQL, MySQL.
-- **AI & Automation:** Model Context Protocol (MCP) Servers, Claude Code Skills & Agents, Python Automation (Trafilatura), AEO/GEO Search Optimization.
-- **DevOps & Performance:** Docker, Docker Compose, Vercel, Core Web Vitals (Sub-second LCP, zero CLS), Jest Testing, Security Hardening (SEC-1..12).
+## Identity & Professional Profile
+- **Full Name:** Felipe Vargas Arias
+- **Current Role:** Full-Stack Developer at Web Stark (Sydney, Australia — Remote from Bogotá, Colombia)
+- **Education:** B.S. in Systems Engineering (*Ingeniería de Sistemas*), UNIMINUTO (2017–2022)
+- **Specializations:** Next.js 15 App Router, React 19, TypeScript, enterprise WordPress/WooCommerce plugin development, Model Context Protocol (MCP), Answer Engine Optimization (AEO/GEO).
+- **Track Record:** ~2,500 commits across 11 production codebases in 10 months at Web Stark.
+- **Personal Lab:** Nandark (https://nandark.com) — 39+ technical articles on modern AI search and developer tooling.
+- **Portfolio Website:** https://felipevargas.vercel.app/
+- **LinkedIn:** https://www.linkedin.com/in/felipevargasarias/
+- **GitHub:** https://github.com/JonathanVargas0111
+- **Twitter/X:** https://twitter.com/felipevargasx_
 
-## Key Production Systems & Architectures
+## Core Capabilities & Applied Stack
+- **Frontend Architecture:** Next.js 15 (App Router, ISR, Server Components), React 19, TypeScript, Tailwind CSS 4, SCSS, Framer Motion, MDX, Velite.
+- **Backend & E-Commerce:** PHP 8.2+, WordPress Custom Plugin Architecture, WooCommerce Core Customization, WHMCS API, Node.js, GraphQL, MySQL.
+- **AI & Automation:** Model Context Protocol (MCP) Servers, Claude Code Skills & Agents, Python Automation (Trafilatura), AEO/GEO Optimization.
+- **DevOps & Quality:** Docker, Docker Compose, Vercel, Core Web Vitals (Sub-second LCP, zero CLS), Jest Testing, Security Hardening (SEC-1..12).
 
-### 1. Food4Fitness (Engineered at Web Stark — Company Project)
-- **Role:** Lead Full-Stack Plugin Engineer (at Web Stark) | 1,596 commits
-- **Stack:** PHP 8.2, WordPress, WooCommerce, JavaScript, SCSS, Jest, Google Maps API, Routific API
-- **Key Deliverables:** Reactive Custom Meal Builder with dynamic gram-to-macro nutrition calculations; multi-zone delivery engine with state holiday cutoffs; post-purchase order modification system; migrated 27 legacy systems.
+## Key Systems in Production
 
-### 2. WebStark.com.au (Engineered at Web Stark — Company Project)
-- **Role:** Lead Frontend Engineer (at Web Stark) | 349 commits
-- **Stack:** Next.js 15, React 19, TypeScript, Tailwind CSS, WordPress WPGraphQL, Critters (Critical CSS)
-- **Key Deliverables:** Headless corporate architecture generating 100+ dynamic service/case study pages; sub-second LCP and zero CLS optimization; interactive portfolio with URL-synced filters; Gravity Forms API integration.
+### 1. Food4Fitness Enterprise Platform
+- **Ownership:** Company Project developed at Web Stark for Food4Fitness Australia (Proprietary).
+- **Role:** Lead Full-Stack Plugin Engineer (at Web Stark) | 1,596 Commits.
+- **Technologies:** PHP 8.2, WordPress, WooCommerce, JavaScript, SCSS, Jest, Google Maps API, Routific API.
+- **Key Deliverables:** Reactive Custom Meal Builder with dynamic gram-to-macro nutrition calculations; multi-zone delivery cutoff engine with state holiday schedules; post-purchase order modification system; migrated 27 legacy Go/Angular systems.
 
-### 3. MX Modules & MX Proposals (Engineered at Web Stark — Company Project)
-- **Role:** Full-Stack & Systems Developer (at Web Stark) | 362 commits
-- **Stack:** PHP 8.2, WHMCS API, Next.js 15, Velite, MDX, Smarty, MySQL
-- **Key Deliverables:** Commercial WHMCS addon with e-signatures, milestone payment plans, PDF generation, SEC-1..12 security hardening; Velite/MDX marketing blog with 97%+ AEO score.
+### 2. WebStark.com.au Headless Corporate Platform
+- **Ownership:** Company Platform belonging to Web Stark Pty Ltd.
+- **Role:** Lead Frontend Engineer (at Web Stark) | 349 Commits.
+- **Technologies:** Next.js 15, React 19, TypeScript, Tailwind CSS, WordPress WPGraphQL, Critters (Critical CSS).
+- **Key Deliverables:** Statically generated 100+ dynamic service/case study pages; sub-second LCP and zero CLS optimization; interactive URL-synced portfolio; Gravity Forms API v2 integration.
 
-### 4. WHMCS Modular Docker & Metrics (Engineered at Web Stark — Company Tool)
-- **Role:** DevOps & Backend Engineer (at Web Stark) | 87 commits
-- **Stack:** Docker, Docker Compose, PHP 8.2, MySQL, Apache, WHMCS
-- **Key Deliverables:** Containerized development environment with bind-mount hot reloading; 5 real-time financial KPI dashboard widgets (MRR, churn risk, cost overrides).
+### 3. MX Modules & MX Proposals Addon Suite
+- **Ownership:** Commercial Product Suite owned by Web Stark.
+- **Role:** Full-Stack & Systems Developer (at Web Stark) | 362 Commits.
+- **Technologies:** PHP 8.2, WHMCS API, Next.js 15, Velite, MDX, Smarty, MySQL.
+- **Key Deliverables:** Commercial WHMCS addon featuring digital e-signatures, percentage milestone payment plans, PDF generation, and SEC-1 to SEC-12 security hardening; Velite/MDX technical content hub with 97%+ AEO score.
 
-### 5. AI SEO Audit Engine & MCP Server (Engineered at Web Stark — Company Tool)
-- **Role:** AI & Automation Developer (at Web Stark) | 83 commits
-- **Stack:** Python, Trafilatura, Model Context Protocol (MCP), Claude Code Skills
+### 4. WHMCS Modular Docker & Metrics
+- **Ownership:** Internal Engineering Tool developed at Web Stark.
+- **Role:** DevOps & Backend Engineer (at Web Stark) | 87 Commits.
+- **Technologies:** Docker, Docker Compose, PHP 8.2, MySQL, Apache, WHMCS.
+- **Key Deliverables:** Containerized development environment with live bind mounts; 5 real-time financial KPI dashboard widgets (MRR, churn risk, service cost overrides).
+
+### 5. AI SEO Audit Engine & MCP Server
+- **Ownership:** Internal Framework developed at Web Stark.
+- **Role:** AI & Automation Developer (at Web Stark) | 83 Commits.
+- **Technologies:** Python, Trafilatura, Model Context Protocol (MCP), Claude Code Skills.
 - **Key Deliverables:** 6-Phase automated technical SEO audit pipeline; custom MCP server bridging WHMCS databases to Claude Desktop.
 
-### 6. Nandark Lab & Publication (Personal Project by Felipe Vargas)
-- **Role:** Founder & Creator | https://nandark.com
-- **Key Deliverables:** 39+ published technical deep dives on SEO, AI indexing, and Web Vitals; custom online SEO & AEO Validators; YouTube Transcript AI Summarizer browser extension (Manifest V3 + Ollama local AI).
+### 6. Nandark Lab & Publication
+- **Ownership:** Personal Lab & Venture created by Felipe Vargas (https://nandark.com).
+- **Role:** Founder & Creator.
+- **Technologies:** Next.js 15, React 19, TypeScript, Tailwind CSS 4, Velite, MDX, Chrome Extensions (MV3), Ollama API.
+- **Key Deliverables:** 39+ published technical articles on AI search engine indexing (AEO/GEO) and Core Web Vitals; online SEO & AEO Validators; YouTube Transcript AI Summarizer browser extension (Manifest V3 + local Ollama integration).
 
-## Education & Certifications
-- **B.S. in Systems Engineering (Ingeniería de Sistemas):** UNIMINUTO (2017–2022)
-- **Advanced Full Stack Web Development (Microservices & NestJS):** Talent Tech Bogotá (2024)
-- **AWS Cloud Foundations:** Universidad Santo Tomás (2022)
-- **Intermediate Frontend Development:** Universidad Distrital (2023)
-- **Full Stack Diploma (Misión TIC 2022):** Universidad El Bosque (2021)
+## Contact & Inquiries
+- **Email:** felipevargas.dev@gmail.com
+- **Direct Messaging:** https://wa.me/573017897176
+- **Availability:** Full-time remote engineering roles, contract development, and system consulting worldwide.

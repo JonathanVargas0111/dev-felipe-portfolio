@@ -12,20 +12,20 @@ export default function ExperienceTimeline() {
   const t = translations[lang].experience;
 
   return (
-    <section id="experience" className="py-24 lg:py-32 relative border-t border-black/[0.06] dark:border-white/[0.06]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-12 sm:space-y-16">
+    <section id="experience" className="py-20 sm:py-24 lg:py-32 relative border-t border-black/[0.06] dark:border-white/[0.06]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 space-y-10 sm:space-y-16">
         
         {/* Section Header */}
-        <div className="space-y-4 max-w-4xl">
+        <div className="space-y-3 sm:space-y-4 max-w-4xl">
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500">
             <span>02 / CHRONOLOGICAL PRODUCTION LEDGER</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-sans font-bold tracking-tight text-slate-950 dark:text-white">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-sans font-bold tracking-tight text-slate-950 dark:text-white">
             {t.title}
           </h2>
 
-          <p className="font-editorial italic text-2xl sm:text-3xl text-slate-600 dark:text-slate-400">
+          <p className="font-editorial italic text-xl sm:text-2xl lg:text-3xl text-slate-600 dark:text-slate-400">
             {t.subtitle}
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function ExperienceTimeline() {
             return (
               <div 
                 key={item.id} 
-                className="py-10 sm:py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+                className="py-8 sm:py-12 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start"
               >
                 {/* Period & Index */}
                 <div className="lg:col-span-3 space-y-1">
@@ -55,13 +55,13 @@ export default function ExperienceTimeline() {
                 </div>
 
                 {/* Role, Company & Achievements */}
-                <div className="lg:col-span-9 space-y-5">
+                <div className="lg:col-span-9 space-y-4 sm:space-y-5">
                   <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                     <div>
-                      <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-slate-950 dark:text-white">
                         {item.role[lang]}
                       </h3>
-                      <div className="font-editorial italic text-xl text-slate-600 dark:text-slate-400 mt-0.5">
+                      <div className="font-editorial italic text-lg sm:text-xl text-slate-600 dark:text-slate-400 mt-0.5">
                         {item.company}
                       </div>
                     </div>
@@ -84,7 +84,7 @@ export default function ExperienceTimeline() {
                   </p>
 
                   {/* Verifiable Bullet List */}
-                  <ul className="space-y-2.5 pt-1">
+                  <ul className="space-y-2 pt-1">
                     {item.achievements[lang].map((ach, i) => (
                       <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
                         <span className="font-mono text-slate-400 mt-0.5">•</span>

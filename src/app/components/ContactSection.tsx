@@ -10,8 +10,7 @@ import {
   ArrowUpRight, 
   Copy, 
   Check, 
-  MessageSquare,
-  AlertCircle
+  MessageSquare
 } from 'lucide-react';
 import { FaLinkedin, FaGithub, FaXTwitter } from 'react-icons/fa6';
 
@@ -71,30 +70,30 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 relative border-t border-black/[0.06] dark:border-white/[0.06]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-12 sm:space-y-16">
+    <section id="contact" className="py-20 sm:py-24 lg:py-32 relative border-t border-black/[0.06] dark:border-white/[0.06]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 space-y-10 sm:space-y-16">
         
         {/* Section Header */}
-        <div className="space-y-4 max-w-4xl">
+        <div className="space-y-3 sm:space-y-4 max-w-4xl">
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500">
             <span>06 / INITIATE DIALOGUE & INQUIRIES</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-sans font-bold tracking-tight text-slate-950 dark:text-white">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-sans font-bold tracking-tight text-slate-950 dark:text-white">
             {t.title}
           </h2>
 
-          <p className="font-editorial italic text-2xl sm:text-3xl text-slate-600 dark:text-slate-400">
+          <p className="font-editorial italic text-xl sm:text-2xl lg:text-3xl text-slate-600 dark:text-slate-400">
             {t.subtitle}
           </p>
         </div>
 
         {/* 2-Column Spread */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           
           {/* Left: Contact Channels & Meta */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-7 sm:p-8 rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-surface-light dark:bg-surface-dark space-y-6 font-mono text-xs">
+            <div className="p-6 sm:p-8 rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-surface-light dark:bg-surface-dark space-y-5 sm:space-y-6 font-mono text-xs">
               
               <div className="flex items-center justify-between border-b border-black/[0.06] dark:border-white/[0.06] pb-3">
                 <span className="font-bold text-slate-900 dark:text-white uppercase">
@@ -107,10 +106,12 @@ export default function ContactSection() {
               <div className="space-y-1.5">
                 <span className="text-slate-400 uppercase">{t.emailLabel}</span>
                 <div className="flex items-center justify-between p-3 rounded-lg border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02]">
-                  <span className="text-slate-900 dark:text-white select-all">{contactEmail}</span>
+                  <span className="text-slate-900 dark:text-white select-all text-[11px] sm:text-xs truncate mr-2">
+                    {contactEmail}
+                  </span>
                   <button
                     onClick={handleCopyEmail}
-                    className="p-1 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                    className="p-1 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors flex-shrink-0"
                     title="Copy email"
                   >
                     {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
@@ -136,7 +137,7 @@ export default function ContactSection() {
               </div>
 
               {/* Availability Info */}
-              <div className="pt-2 border-t border-black/[0.06] dark:border-white/[0.06] space-y-1 text-slate-500">
+              <div className="pt-2 border-t border-black/[0.06] dark:border-white/[0.06] space-y-1 text-slate-500 text-[11px] sm:text-xs">
                 <div>• Location: Bogotá, Colombia · 100% Remote Worldwide</div>
                 <div>• Expected response window: &lt; 24 hours</div>
               </div>
@@ -148,6 +149,7 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                  aria-label="LinkedIn"
                 >
                   <FaLinkedin className="w-4 h-4" />
                 </a>
@@ -156,6 +158,7 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                  aria-label="GitHub"
                 >
                   <FaGithub className="w-4 h-4" />
                 </a>
@@ -164,6 +167,7 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                  aria-label="Twitter"
                 >
                   <FaXTwitter className="w-4 h-4" />
                 </a>
@@ -176,7 +180,7 @@ export default function ContactSection() {
           <div className="lg:col-span-7">
             <form
               onSubmit={formik.handleSubmit}
-              className="p-7 sm:p-9 rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-surface-light dark:bg-surface-dark space-y-4"
+              className="p-6 sm:p-9 rounded-2xl border border-black/[0.08] dark:border-white/[0.08] bg-surface-light dark:bg-surface-dark space-y-4"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">

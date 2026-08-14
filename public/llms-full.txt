@@ -1,50 +1,100 @@
-Title
-Felipe Vargas — Full-Stack Developer & Automation
+# Felipe Vargas Arias — Comprehensive Engineering Dossier & LLM Context File
 
-Homepage
-https://felipevargas.vercel.app/
+## 1. Executive Summary
+Felipe Vargas Arias is a Systems Engineer (*Ingeniero de Sistemas* from UNIMINUTO, 2017–2022) and Full-Stack Software Engineer based in Bogotá, Colombia, working remotely for the Australian digital agency **Web Stark** (Sydney, Australia).
 
-One-line
-Full-Stack Developer especializado en desarrollo web, ecommerce y automatizacion con foco en performance, SEO y conversion.
+Over the past 10 months at Web Stark, Felipe contributed ~2,500 commits across 11 production codebases, leading plugin architecture, headless web applications, commercial WHMCS addons, and AI/MCP integrations.
 
-Bio
-Ingeniero de Sistemas y Desarrollador Full-Stack. Trabajo en proyectos reales para clientes internacionales y marcas propias. Me enfoco en entregar productos web rapidos, escalables y orientados a resultados.
+He is also the founder of **Nandark** (https://nandark.com), a research publication and software lab with 39+ published technical articles exploring Answer Engine Optimization (AEO/GEO), search indexing in the LLM era, and local AI agent workflows.
 
-Core Services
-- Desarrollo web moderno (Next.js, React, TypeScript)
-- Ecommerce (WordPress, WooCommerce)
-- Automatizacion y workflows con IA
-- SEO tecnico, performance y Core Web Vitals
+---
 
-Tech Stack
-- Frontend: Next.js, React, TypeScript, Tailwind CSS
-- Backend: Node.js, Express, PHP
-- Ecommerce: WordPress, WooCommerce, WHMCS
-- Infra: Docker
-- SEO: JSON-LD, sitemaps, optimizacion tecnica
+## 2. Professional Experience Timeline
 
-Selected Projects
-- Nandark — desarrollo y automatizacion para negocios
-  URL: https://nandark.com/
-  Role: Fundador / desarrollador
-  Summary: Servicios de desarrollo web y automatizacion con enfoque en performance y conversion.
+### Full-Stack Developer — Web Stark (Mar 2025 – Present)
+- **Location:** Sydney, Australia (Remote from Bogotá)
+- **Role:** Core engineer across 11 production projects with ~2,500 commits in 10 months.
+- **Key Contributions:**
+  1. *Food4Fitness (1,596 commits):* Custom Meal Builder with dynamic macro nutrition calculations, multi-zone delivery cutoff engine, and zero-downtime migration of 27 legacy Go/Angular systems into WordPress/WooCommerce.
+  2. *WebStark.com.au (349 commits):* Headless corporate architecture using Next.js 15, React 19, TypeScript, and WPGraphQL with 100+ statically generated pages, sub-second LCP, and zero CLS.
+  3. *MX Modules & MX Proposals (362 commits):* Commercial WHMCS addon with e-signatures, percentage milestone payment plans, PDF generation, and SEC-1..12 security compliance; marketing blog with 97%+ AEO score.
+  4. *WHMCS Modular Docker (87 commits):* Containerized development stack with live bind mounts and 5 financial KPI metrics widgets (MRR, churn predictor, profit margin).
+  5. *AI SEO Framework & MCP Server (83 commits):* 6-Phase automated technical SEO audit pipeline with Python similarity scoring and an MCP server connecting WHMCS to Claude Desktop.
 
-- Johanna Skincare
-  URL: https://johanna-skincare.vercel.app/
-  Role: Desarrollo web
-  Summary: Sitio de cliente con enfoque en confianza, estetica y conversion.
+### Independent Web Developer & Consultant — Freelance & Nandark Lab (Jan 2024 – Feb 2025)
+- Delivered high-performance custom web applications with Next.js, React, and Tailwind CSS.
+- Published 39+ in-depth technical deep dives on SEO, AI search architectures, and Core Web Vitals at nandark.com.
+- Engineered the *YouTube Transcript AI Summarizer* browser extension (Manifest V3 + local Ollama AI integration).
 
-- TechHub
-  URL: https://techhub-alpha.vercel.app/
-  Role: Desarrollo frontend
-  Summary: Ecommerce de tecnologia con catalogo, categorias y carrito.
+### Database & Infrastructure Analyst (Internship) — Accenture (Jun 2019 – Nov 2019)
+- Analyzed enterprise infrastructure inventories and built analytical dashboards for cloud migration decision-making.
+- Developed internal backend tooling with Node.js and Express to automate recurring operational reports.
+- Participated in feasibility assessments for on-premise server cluster migration to cloud environments.
 
-- WebStark
-  URL: https://webstark.com.au/
-  Role: Full-Stack Developer
-  Summary: Proyectos headless con Next.js + WordPress GraphQL y SEO tecnico.
+---
 
-Contact
-- LinkedIn: https://www.linkedin.com/in/felipevargasarias/
-- GitHub: https://github.com/JonathanVargas0111
-- X: https://twitter.com/felipevargasx_
+## 3. Detailed Technical Stack Taxonomy
+
+### Modern Frontend Architecture
+- **Frameworks:** Next.js 15 (App Router, Server Components, Static Site Generation, ISR), React 19.
+- **Languages & Types:** TypeScript 5.6+, JavaScript ES6+.
+- **Styling & Tokens:** Tailwind CSS 4, SCSS (BEM architecture), CSS Modules.
+- **Motion & UX:** Framer Motion (dynamic imports, layout animations, zero-hydration bloat).
+- **Content Systems:** Velite, MDX, Rehype/Remark plugins.
+
+### Backend, CMS & E-Commerce Engineering
+- **Core Languages:** PHP 8.2+, Node.js.
+- **WordPress & WooCommerce:** Custom Plugin Architecture, Custom Post Types, REST API Endpoints, Custom Meal Builders, Cart Drawer Overrides, Checkout Validations, Template Hooks.
+- **WHMCS API:** Addon Modules, Freemium Code Stripping Pipelines, License Phone-Home Heartbeats, PDF Generation, E-Signatures.
+- **APIs & Query Languages:** GraphQL (WPGraphQL), RESTful API design, Webhooks.
+- **Databases:** MySQL (schema design, indexing, self-healing migration guardians).
+
+### AI, Model Context Protocol & Automation
+- **Model Context Protocol (MCP):** Custom MCP servers bridging relational databases with Claude Desktop.
+- **Agent Tooling:** Claude Code Skills & Agents (automated SEO audits, code reviews, AEO validations).
+- **Python Automation:** Trafilatura web scraping, semantic text similarity scoring, duplicate content detection.
+- **Generative Search Optimization:** Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), `llms.txt` specifications, JSON-LD Schema.org graphs.
+- **Local AI:** Browser extensions integrating with local Ollama LLMs (Llama 3, Mistral).
+
+### DevOps, Performance & Quality
+- **Containerization:** Docker, Docker Compose (bind-mount development stacks).
+- **Cloud & Hosting:** Vercel, AWS (Cloud Foundations).
+- **Performance Engineering:** Core Web Vitals optimization (Sub-second LCP, 0 CLS, optimized Critical CSS with Critters).
+- **Testing:** Jest unit and integration testing.
+- **Security:** Capability checks, strict input sanitization, rate limiting, SEC-1 to SEC-12 benchmarks.
+
+---
+
+## 4. Key Systems Case Studies
+
+### Case 01: Food4Fitness
+- **Client:** Food4Fitness (Australian fitness meal prep delivery service)
+- **Agency:** Web Stark (Company Project)
+- **Problem:** Needed to replace an aging Go/Angular custom application with a modern WordPress/WooCommerce plugin without losing custom business logic (gram-level macro calculations, state-specific holiday delivery cutoff rules, post-purchase order editing).
+- **Solution:** Architected a modular plugin with a pure Service Layer (`includes/services/`). Built a dynamic Custom Meal Builder that calculates calories, protein, carbs, and fats in real-time from ingredient weights, a delivery scheduling engine with state cutoff rules, and complete post-purchase order editing with strict deadline validation. Migrated 27 legacy workflows with zero data loss.
+
+### Case 02: WebStark.com.au
+- **Company:** Web Stark Pty Ltd (Headless Corporate Platform)
+- **Problem:** Build an ultra-fast corporate web platform pulling dynamic content from WordPress via GraphQL while achieving sub-second LCP and zero CLS.
+- **Solution:** Next.js 15 App Router with Incremental Static Regeneration (ISR) pre-rendering 100+ dynamic service, location, and case study pages. Extracted critical CSS using Critters, built dynamic Framer Motion loaders, and designed a custom CDN image pipeline.
+
+### Case 03: MX Modules & MX Proposals
+- **Company:** Web Stark (Commercial WHMCS Addon Line)
+- **Problem:** Create an enterprise-grade proposal and billing addon for WHMCS with dual Free/Pro distribution builds, server-side license verification, e-signatures, and milestone payment plans.
+- **Solution:** Automated build pipeline with code-stripping markers (`@pro-start/@pro-end`), cryptographic heartbeat license validation against accounts.webstark.com.au, responsive proposal viewer with canvas signatures, and an MDX marketing blog with a 97%+ AEO score.
+
+### Case 04: Nandark Lab (nandark.com)
+- **Owner:** Felipe Vargas (Personal Lab & Venture)
+- **Focus:** Research into AI search indexing, AEO/GEO, and developer utilities.
+- **Deliverables:** 39+ in-depth technical essays, online SEO & AEO Validators, and the YouTube Transcript AI browser extension (Manifest V3 + local Ollama).
+
+---
+
+## 5. Contact & Social Channels
+- **Website:** https://felipevargas.vercel.app/
+- **Email:** felipevargas.dev@gmail.com
+- **WhatsApp:** https://wa.me/573017897176
+- **LinkedIn:** https://www.linkedin.com/in/felipevargasarias/
+- **GitHub:** https://github.com/JonathanVargas0111
+- **Twitter/X:** https://twitter.com/felipevargasx_
+- **Blog:** https://nandark.com/blog

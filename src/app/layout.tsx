@@ -1,24 +1,39 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Providers from './store/provider';
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#fbfbfd' },
+    { media: '(prefers-color-scheme: dark)', color: '#0b0d12' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
   title: 'Felipe Vargas Arias — Full-Stack & Systems Engineer',
-  description: 'Systems Engineer & Full-Stack Developer with ~2,500 commits in production at Web Stark. Specializing in Next.js 15, WooCommerce enterprise plugins, Model Context Protocol (MCP) and AI search optimization (AEO).',
+  description: 'Systems Engineer & Full-Stack Developer with ~2,500 commits in production at Web Stark. Specializing in Next.js 15, WooCommerce enterprise plugins, Model Context Protocol (MCP), and Answer Engine Optimization (AEO/GEO).',
   keywords: [
     'Felipe Vargas',
     'Felipe Vargas Arias',
     'Full Stack Developer',
+    'Systems Engineer',
     'Web Stark',
     'Next.js 15',
     'React 19',
     'TypeScript',
     'WordPress Plugin Developer',
     'WooCommerce Customization',
+    'Custom Meal Builder',
     'Model Context Protocol',
     'MCP Server',
     'AEO GEO Optimization',
+    'Answer Engine Optimization',
     'Nandark',
+    'Bogota Developer',
+    'Remote Full Stack Engineer',
   ],
   authors: [{ name: 'Felipe Vargas Arias', url: 'https://felipevargas.vercel.app' }],
   creator: 'Felipe Vargas Arias',
@@ -26,12 +41,17 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://felipevargas.vercel.app/'),
   alternates: {
     canonical: '/',
+    languages: {
+      'es-ES': '/',
+      'en-US': '/',
+    },
   },
   openGraph: {
-    type: 'website',
+    type: 'profile',
     locale: 'es_ES',
+    alternateLocale: ['en_US'],
     url: 'https://felipevargas.vercel.app/',
-    siteName: 'Felipe Vargas Arias — Full-Stack & Systems Engineer',
+    siteName: 'Felipe Vargas Arias — Portfolio & Engineering Monograph',
     title: 'Felipe Vargas Arias — Full-Stack & Systems Engineer',
     description: 'Systems Engineer with ~2,500 commits across 11 production codebases. Next.js 15, WooCommerce engines, and AI automation.',
     images: [
@@ -39,7 +59,7 @@ export const metadata: Metadata = {
         url: '/img/bg-felipevargas.png',
         width: 1200,
         height: 630,
-        alt: 'Felipe Vargas Arias — Portfolio',
+        alt: 'Felipe Vargas Arias — Full-Stack & Systems Engineer',
       },
     ],
   },
@@ -51,10 +71,27 @@ export const metadata: Metadata = {
     description: 'Systems Engineer with ~2,500 commits in production. Next.js 15, WooCommerce engines, and AI automation.',
     images: ['/img/bg-felipevargas.png'],
   },
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.webmanifest',
 };
 
 export default function RootLayout({
@@ -62,35 +99,83 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const structuredData = {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://felipevargas.vercel.app';
+
+  const schemaGraph = {
     '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Felipe Vargas Arias',
-    jobTitle: 'Full-Stack Software Engineer & Automation Specialist',
-    url: 'https://felipevargas.vercel.app',
-    sameAs: [
-      'https://www.linkedin.com/in/felipevargasarias/',
-      'https://github.com/JonathanVargas0111',
-      'https://twitter.com/felipevargasx_',
-      'https://nandark.com',
+    '@graph': [
+      {
+        '@type': 'ProfilePage',
+        '@id': `${siteUrl}/#profilepage`,
+        url: siteUrl,
+        name: 'Felipe Vargas Arias — Full-Stack & Systems Engineer Portfolio',
+        description: 'Professional portfolio and engineering monograph of Felipe Vargas Arias.',
+        mainEntity: {
+          '@id': `${siteUrl}/#person`,
+        },
+      },
+      {
+        '@type': 'Person',
+        '@id': `${siteUrl}/#person`,
+        name: 'Felipe Vargas Arias',
+        givenName: 'Felipe',
+        familyName: 'Vargas Arias',
+        jobTitle: 'Full-Stack Software Engineer & Systems Architect',
+        url: siteUrl,
+        image: `${siteUrl}/img/bg-felipevargas.png`,
+        sameAs: [
+          'https://www.linkedin.com/in/felipevargasarias/',
+          'https://github.com/JonathanVargas0111',
+          'https://twitter.com/felipevargasx_',
+          'https://nandark.com',
+        ],
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Web Stark',
+          url: 'https://webstark.com.au',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Sydney',
+            addressCountry: 'Australia',
+          },
+        },
+        founder: {
+          '@type': 'Organization',
+          name: 'Nandark',
+          url: 'https://nandark.com',
+          description: 'Digital research lab for AI search optimization (AEO/GEO) and developer tooling.',
+        },
+        alumniOf: {
+          '@type': 'EducationalOrganization',
+          name: 'Corporación Universitaria Minuto de Dios (UNIMINUTO)',
+          url: 'https://www.uniminuto.edu',
+        },
+        knowsAbout: [
+          'Next.js 15 App Router',
+          'React 19',
+          'TypeScript',
+          'PHP 8.2',
+          'WordPress Plugin Architecture',
+          'WooCommerce Core Customization',
+          'WHMCS Addon Architecture',
+          'Docker & Containerization',
+          'Model Context Protocol (MCP)',
+          'Answer Engine Optimization (AEO/GEO)',
+          'Core Web Vitals Optimization',
+          'Software Architecture & Service Layer Patterns',
+        ],
+        description: 'Systems Engineer with ~2,500 commits in production across 11 commercial and enterprise codebases.',
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        url: siteUrl,
+        name: 'Felipe Vargas Arias — Portfolio & Systems Monograph',
+        publisher: {
+          '@id': `${siteUrl}/#person`,
+        },
+      },
     ],
-    knowsAbout: [
-      'Next.js 15',
-      'React 19',
-      'TypeScript',
-      'PHP 8.2',
-      'WordPress Plugin Development',
-      'WooCommerce Custom Engineering',
-      'WHMCS Addon Architecture',
-      'Docker & Containerization',
-      'Model Context Protocol (MCP)',
-      'Answer Engine Optimization (AEO)',
-      'Core Web Vitals',
-    ],
-    alumniOf: {
-      '@type': 'EducationalOrganization',
-      name: 'Corporación Universitaria Minuto de Dios (UNIMINUTO)',
-    },
   };
 
   return (
@@ -112,7 +197,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
       </head>
       <body className="bg-page-light dark:bg-page-dark text-slate-950 dark:text-ink-primary min-h-screen antialiased">

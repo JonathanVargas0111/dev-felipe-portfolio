@@ -10,6 +10,7 @@ import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
 import CompanyNoticeBanner from './CompanyNoticeBanner';
 import { ArrowRight, ExternalLink, Lock } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function ProjectsSection() {
   const { lang } = useSelector((state: RootState) => state.settings);
@@ -49,7 +50,13 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 space-y-10 sm:space-y-16">
         
         {/* Section Header */}
-        <div className="space-y-3 sm:space-y-4 max-w-4xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="space-y-3 sm:space-y-4 max-w-4xl"
+        >
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500">
             <span>03 / SELECTED WORKS & ARCHITECTURES</span>
           </div>
@@ -61,7 +68,7 @@ export default function ProjectsSection() {
           <p className="font-editorial italic text-xl sm:text-2xl lg:text-3xl text-slate-600 dark:text-slate-400">
             {t.subtitle}
           </p>
-        </div>
+        </motion.div>
 
         {/* Company Attribution Notice */}
         <CompanyNoticeBanner />
@@ -96,7 +103,11 @@ export default function ProjectsSection() {
               const indexFormatted = String(idx + 1).padStart(2, '0');
 
               return (
-                <div
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                   key={project.id}
                   className="rounded-2xl sm:rounded-3xl border border-black/[0.08] dark:border-white/[0.08] bg-surface-light dark:bg-surface-dark p-6 sm:p-10 lg:p-12 space-y-6 sm:space-y-8"
                 >
@@ -218,7 +229,7 @@ export default function ProjectsSection() {
 
                   </div>
 
-                </div>
+                </motion.div>
               );
             })}
           </div>

@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
 import { translations } from '../../data/translations';
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function HeroSection() {
   const { lang } = useSelector((state: RootState) => state.settings);
@@ -18,8 +19,20 @@ export default function HeroSection() {
   ];
 
   return (
-    <section id="home" className="pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 space-y-10 sm:space-y-16">
+    <section id="home" className="pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 lg:pb-28 relative overflow-hidden">
+      {/* Aurora Background Effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10 opacity-30 dark:opacity-40 mix-blend-multiply dark:mix-blend-color-dodge">
+        <div className="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vh] rounded-full bg-purple-500/40 blur-[100px] animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute top-[20%] right-[-10%] w-[30vw] h-[50vh] rounded-full bg-blue-500/30 blur-[120px] animate-pulse" style={{ animationDuration: '12s' }} />
+        <div className="absolute bottom-[-10%] left-[20%] w-[50vw] h-[30vh] rounded-full bg-emerald-500/20 blur-[120px] animate-pulse" style={{ animationDuration: '10s' }} />
+      </div>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 space-y-10 sm:space-y-16 relative z-10"
+      >
         
         {/* Editorial Top Metadata Ribbon */}
         <div className="flex flex-wrap items-center justify-between gap-2.5 text-xs font-mono uppercase tracking-wider text-[var(--text-dim)] border-b border-[var(--border-hairline)] pb-3 sm:pb-4">
@@ -140,7 +153,7 @@ export default function HeroSection() {
 
         </div>
 
-      </div>
+      </motion.div>
     </section>
   );
 }

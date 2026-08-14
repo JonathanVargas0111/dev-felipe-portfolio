@@ -82,7 +82,7 @@ export default function ProjectsSection() {
                 <button
                   key={filter.id}
                   onClick={() => setSelectedFilter(filter.id as any)}
-                  className={`px-3 py-1.5 text-xs font-mono whitespace-nowrap transition-colors ${
+                  className={`px-3 py-1.5 text-sm font-mono whitespace-nowrap transition-colors ${
                     isActive
                       ? 'bg-slate-950 dark:bg-white text-white dark:text-slate-950 rounded font-semibold'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white'
@@ -129,7 +129,7 @@ export default function ProjectsSection() {
                       <span className="text-slate-400 hidden sm:inline">{project.period}</span>
                     </div>
 
-                    <span className="text-[11px] sm:text-xs font-mono text-slate-500 dark:text-slate-400">
+                    <span className="text-xs sm:text-sm font-mono text-slate-500 dark:text-slate-400">
                       ROLE: {project.company?.role || 'Creator & Architect'}
                     </span>
                   </div>
@@ -148,7 +148,7 @@ export default function ProjectsSection() {
                         </p>
                       </div>
 
-                      <p className="text-xs sm:text-sm lg:text-base leading-relaxed text-slate-700 dark:text-slate-300 font-normal">
+                      <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-slate-700 dark:text-slate-300 font-normal">
                         {project.overview[lang]}
                       </p>
 
@@ -159,7 +159,7 @@ export default function ProjectsSection() {
                             <div className="text-base sm:text-lg font-mono font-bold text-slate-950 dark:text-white">
                               {m.value}
                             </div>
-                            <div className="text-[9px] sm:text-[10px] font-mono uppercase text-slate-500 dark:text-slate-400 leading-tight">
+                            <div className="text-xs sm:text-[11px] font-mono uppercase text-slate-500 dark:text-slate-400 leading-tight">
                               {m.label}
                             </div>
                           </div>
@@ -171,7 +171,7 @@ export default function ProjectsSection() {
                         {project.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded text-[11px] sm:text-xs font-mono bg-black/[0.03] dark:bg-white/[0.04] text-slate-800 dark:text-slate-200 border border-black/[0.06] dark:border-white/[0.06]"
+                            className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded text-xs sm:text-sm font-mono bg-black/[0.03] dark:bg-white/[0.04] text-slate-800 dark:text-slate-200 border border-black/[0.06] dark:border-white/[0.06]"
                           >
                             {tech}
                           </span>

@@ -16,7 +16,7 @@ export const translations = {
       badge: 'Sistemas & Full-Stack · Remoto (Global)',
       titleLine1: 'Felipe Vargas.',
       titleLine2: 'Ingeniería de Software, E-Commerce & Automatización IA.',
-      description: 'Ingeniero de Sistemas y Desarrollador Full-Stack con ~2,500 commits en producción para empresas internacionales. Especializado en arquitecturas Next.js 15, plugins WooCommerce avanzados, microservicios y flujos con IA.',
+      description: 'Ingeniero de Sistemas y Desarrollador Full-Stack especializado en arquitecturas de alto rendimiento con Next.js, plataformas e-commerce empresariales y automatización con IA.',
       viewProjectsBtn: 'Ver Proyectos',
       viewMatrixBtn: 'Matriz Técnica',
       downloadCvBtn: 'Descargar CV',
@@ -36,7 +36,7 @@ export const translations = {
     },
     companyDisclaimer: {
       title: 'Nota de Atribución y Claridad Profesional',
-      text: 'Los proyectos empresariales destacados en esta sección (como Food4Fitness, WebStark.com.au, MX Modules, MX Proposals y Docker stacks) fueron desarrollados y construidos durante mi trabajo como Desarrollador Full-Stack en la agencia australiana Web Stark (Sydney, Australia). La propiedad de estas plataformas corresponde a Web Stark y sus respectivos clientes; aquí se documenta mi rol de liderazgo técnico, diseño de arquitectura y contribución directa de código.',
+      text: 'Los proyectos empresariales mostrados fueron construidos durante mi rol en Web Stark y documentan mi contribución técnica. La propiedad pertenece a Web Stark y sus clientes.',
       companyLinkText: 'Visitar Web Stark',
     },
     about: {
@@ -44,9 +44,7 @@ export const translations = {
       title: 'Ingeniería orientada a resultados reales.',
       subtitle: 'Sin atajos, sin humo: código modular, pruebas rigurosas y arquitectura sostenible.',
       paragraphs: [
-        'Soy Felipe Vargas, Ingeniero de Sistemas egresado de UNIMINUTO y Desarrollador Full-Stack enfocado en crear soluciones web robustas, rápidas y escalables.',
-        'Durante el último año en la agencia australiana Web Stark he contribuido con más de 2,500 commits en 11 proyectos en producción: desde la migración completa de 27 sistemas legacy en un plugin WooCommerce de alta complejidad nutricional, hasta plataformas corporativas headless con Next.js 15, React 19 y optimización extrema de Core Web Vitals.',
-        'Además de mi trabajo profesional, dirijo Nandark (mi laboratorio personal de investigación en SEO y optimización para motores de respuesta de IA - AEO/GEO), donde he publicado más de 39 artículos técnicos y desarrollado herramientas de código abierto.',
+        'Soy Felipe Vargas, Ingeniero de Sistemas enfocado en soluciones web rápidas y escalables. Más allá del código limpio, diseño arquitecturas resilientes y dirijo Nandark, mi laboratorio de investigación técnica sobre agentes de IA y optimización de motores de respuesta (AEO/GEO).'
       ],
       highlights: [
         {
@@ -173,7 +171,7 @@ export const translations = {
       badge: 'Systems & Full-Stack · Remote (Global)',
       titleLine1: 'Felipe Vargas.',
       titleLine2: 'Software Engineering, E-Commerce & AI Automation.',
-      description: 'Systems Engineer and Full-Stack Developer with ~2,500 commits in production for international teams. Specializing in Next.js 15 architectures, enterprise WooCommerce plugin systems, microservices, and AI workflows.',
+      description: 'Systems Engineer and Full-Stack Developer specializing in high-performance architectures with Next.js, enterprise e-commerce platforms, and AI automation.',
       viewProjectsBtn: 'View Projects',
       viewMatrixBtn: 'Technical Matrix',
       downloadCvBtn: 'Download CV',
@@ -193,7 +191,7 @@ export const translations = {
     },
     companyDisclaimer: {
       title: 'Professional Attribution & Project Ownership Notice',
-      text: 'The enterprise projects featured in this portfolio (such as Food4Fitness, WebStark.com.au, MX Modules, MX Proposals, and Docker stacks) were architected and developed during my work as Full-Stack Developer at Australian digital agency Web Stark (Sydney, Australia). Ownership of these platforms belongs to Web Stark and its respective clients; this showcase documents my technical leadership, architectural decisions, and direct code contributions.',
+      text: 'The enterprise projects featured were built during my role at Web Stark, documenting my technical contribution. Ownership belongs to Web Stark and its clients.',
       companyLinkText: 'Visit Web Stark',
     },
     about: {
@@ -201,9 +199,7 @@ export const translations = {
       title: 'Engineering driven by real production outcomes.',
       subtitle: 'No shortcuts, no buzzword fluff: modular code, rigorous testing, and sustainable architecture.',
       paragraphs: [
-        'I am Felipe Vargas, a Systems Engineer graduated from UNIMINUTO and a Full-Stack Developer focused on building robust, high-speed, and scalable web solutions.',
-        'Over the past year at Australian digital agency Web Stark, I have contributed over 2,500 commits across 11 production projects: from the full migration of 27 legacy systems into a WooCommerce plugin with complex nutritional engines, to headless corporate platforms powered by Next.js 15, React 19, and rigorous Core Web Vitals optimizations.',
-        'Beyond client work, I run Nandark (my personal software and AI search optimization lab), where I have published 39+ technical articles on Answer Engine Optimization (AEO/GEO) and created open-source developer tooling.',
+        'I am Felipe Vargas, a Systems Engineer focused on building robust and scalable web solutions. Beyond clean code, I architect resilient systems and run Nandark, my technical research lab exploring AI agents and Answer Engine Optimization (AEO/GEO).'
       ],
       highlights: [
         {

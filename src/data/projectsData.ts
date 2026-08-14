@@ -18,8 +18,8 @@ export const projectsData: Project[] = [
       commitsCount: 1596,
     },
     overview: {
-      en: 'Enterprise-grade WooCommerce plugin and custom order engine for a leading Australian fitness meal prep company. Features a custom macro meal builder, dynamic delivery cutoff rules, post-purchase order modification, and legacy system migration.',
-      es: 'Plugin integral de WordPress/WooCommerce y motor de pedidos personalizado para empresa australiana de meal prep. Incluye constructor de comidas con cálculo de macros en tiempo real, gestión de zonas de delivery por cutoffs, edición post-compra y migración de 27 sistemas legacy.',
+      en: 'Enterprise-grade WooCommerce plugin and custom order engine powering a leading Australian fitness meal prep company.',
+      es: 'Motor de pedidos personalizado y plugin empresarial para una compañía líder australiana de meal prep.',
     },
     challenge: {
       en: 'The client needed to migrate 27 legacy Go/Angular systems into WordPress/WooCommerce without losing custom business logic: variable gram-level macro calculations, complex delivery schedules with state-specific holiday cutoffs, and post-purchase order modifications.',
@@ -94,8 +94,8 @@ export const projectsData: Project[] = [
       commitsCount: 349,
     },
     overview: {
-      en: 'High-performance headless corporate web platform for Australian digital agency Web Stark. Built with Next.js 15 App Router, React 19, TypeScript, and WordPress GraphQL backend, featuring static generation of 100+ pages and extreme Core Web Vitals optimization.',
-      es: 'Plataforma web corporativa headless de alto rendimiento para la agencia australiana Web Stark. Construida con Next.js 15 App Router, React 19, TypeScript y WordPress GraphQL, con generación estática de más de 100 páginas y optimización avanzada de Core Web Vitals.',
+      en: 'High-performance headless corporate web platform achieving sub-second loads and seamless client conversion.',
+      es: 'Plataforma web corporativa headless de alto rendimiento diseñada para maximizar la conversión y velocidad de carga.',
     },
     challenge: {
       en: 'Deliver an ultra-fast headless web presence supporting dynamic content management in WordPress while achieving sub-second LCP, zero CLS, and seamless interactive portfolio filtering without client-side hydration bottlenecks.',
@@ -165,8 +165,8 @@ export const projectsData: Project[] = [
       commitsCount: 362,
     },
     overview: {
-      en: 'Commercial addon product suite and marketing platform for WHMCS. Features MX Proposals (e-signatures, milestone payment plans, PDF generation, SEC-1 to SEC-12 security hardening) and MX Modules SaaS marketing site with Velite/MDX technical content hub (97%+ AEO score).',
-      es: 'Suite de addons comerciales y plataforma de marketing SaaS para WHMCS. Incluye MX Proposals (firma electrónica, planes de pago por hitos, generación de PDFs, hardening SEC-1 a SEC-12) y el sitio de producto MX Modules con blog técnico en Velite/MDX (97%+ score AEO).',
+      en: 'Commercial WHMCS addon product suite featuring e-signatures, payment plans, and a high-converting marketing platform.',
+      es: 'Suite de addons comerciales para WHMCS con firma electrónica, planes de pago y plataforma de marketing de alta conversión.',
     },
     challenge: {
       en: 'Build a secure, enterprise-grade proposal and billing addon for WHMCS with dual Free/Pro distribution builds, server-side license verification, and complete defense against tampering, while creating a high-converting MDX-powered marketing engine.',
@@ -229,8 +229,8 @@ export const projectsData: Project[] = [
     tags: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS 4', 'Velite MDX', 'AEO/GEO', 'AI Research'],
     featured: true,
     overview: {
-      en: 'Felipe’s personal research lab, technical publication, and software workshop. Houses 39+ in-depth technical articles covering AI-era SEO, Answer Engine Optimization (AEO/GEO), Core Web Vitals, and autonomous agents, along with custom online audit utilities.',
-      es: 'Laboratorio de desarrollo personal, publicación técnica y taller de software de Felipe Vargas. Alberga más de 39 artículos técnicos profundos sobre SEO en la era de la IA, AEO/GEO, Core Web Vitals y agentes autónomos, además de herramientas web de validación.',
+      en: 'Personal technical publication and laboratory exploring AI-era SEO, Answer Engine Optimization (AEO), and developer tooling.',
+      es: 'Publicación técnica personal explorando el SEO en la era de la IA (AEO/GEO) y el desarrollo de herramientas de código abierto.',
     },
     challenge: {
       en: 'Create a high-speed, modern publishing and utility platform to research how modern AI search engines (ChatGPT Search, Perplexity, Google AI Overviews) index and synthesize web content.',
@@ -291,8 +291,8 @@ export const projectsData: Project[] = [
     tags: ['Chrome Extension', 'Manifest V3', 'JavaScript', 'Ollama API', 'Local AI', 'Open Source'],
     featured: true,
     overview: {
-      en: 'A lightweight, privacy-focused browser extension (Manifest V3) for Chromium and Brave browsers that extracts YouTube video transcripts with timestamp anchors and generates local AI summaries via Ollama with zero cloud tracking.',
-      es: 'Extensión de navegador ligera y con enfoque de privacidad (Manifest V3) para Chrome y Brave que extrae transcripciones de videos de YouTube con marcas de tiempo y genera resúmenes con IA local (Ollama) sin enviar datos a la nube.',
+      en: 'Privacy-focused Chromium extension for instant YouTube transcript extraction and local AI summarization.',
+      es: 'Extensión para navegadores enfocada en privacidad para extracción instantánea de transcripciones y resúmenes con IA local.',
     },
     challenge: {
       en: 'Most transcript summarizers send user viewing data to third-party cloud servers and require paid API subscriptions. Felipe needed an instantaneous, 100% local, privacy-respecting workflow for dev research.',
@@ -360,8 +360,8 @@ export const projectsData: Project[] = [
       commitsCount: 87,
     },
     overview: {
-      en: 'Modular containerized development environment for WHMCS addon engineering with live bind-mounts and MX Metrics, an executive financial analytics suite with 5 real-time KPI widgets.',
-      es: 'Entorno de desarrollo containerizado modular para addons de WHMCS con bind-mounts en caliente y MX Metrics, un paquete de analítica financiera con 5 widgets de KPIs en tiempo real.',
+      en: 'Modular containerized environment and financial executive dashboard tracking real-time agency MRR.',
+      es: 'Entorno Docker modular y panel financiero ejecutivo para seguimiento de MRR en tiempo real de la agencia.',
     },
     challenge: {
       en: 'Setting up local WHMCS development environments was historically slow and prone to OS discrepancies. Additionally, agency leadership needed real-time visibility into MRR, client support churn, and profitability.',
@@ -426,8 +426,8 @@ export const projectsData: Project[] = [
       commitsCount: 83,
     },
     overview: {
-      en: 'Internal 6-phase automated SEO audit framework powered by Claude Code skills and Python algorithms, alongside an MCP (Model Context Protocol) server allowing AI desktop assistants to query WHMCS databases directly using natural language.',
-      es: 'Framework interno de auditoría SEO automatizada en 6 fases impulsado por skills de Claude Code y algoritmos en Python, junto con un servidor MCP (Model Context Protocol) para consultar bases de datos WHMCS con lenguaje natural.',
+      en: 'Automated 6-phase SEO audit engine and natural language database bridge powered by AI and Python.',
+      es: 'Motor de auditoría SEO automatizado de 6 fases y puente a base de datos en lenguaje natural impulsado por IA.',
     },
     challenge: {
       en: 'Manual technical SEO audits for agency clients took 8+ hours per site. Meanwhile, non-technical managers needed instant insights from client databases without writing manual SQL queries.',
@@ -484,8 +484,8 @@ export const projectsData: Project[] = [
     tags: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Conversion Optimization'],
     featured: false,
     overview: {
-      en: 'Bespoke web experience and digital booking portal designed for an aesthetic skincare brand. Built for rapid load times, conversion flow clarity, and premium brand storytelling.',
-      es: 'Experiencia web y portal de reservas diseñado para marca de estética y cuidado facial. Construida para tiempos de carga ultrarrápidos, claridad en el embudo de conversión y presencia de marca premium.',
+      en: 'High-converting aesthetic digital platform designed for rapid booking flow and premium brand storytelling.',
+      es: 'Plataforma digital de estética diseñada para alta conversión y presencia de marca premium.',
     },
     challenge: {
       en: 'The client needed a digital storefront that reflected high-end clinical aesthetic standards while keeping interaction friction minimal on mobile devices.',

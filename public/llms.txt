@@ -1,22 +1,53 @@
-Felipe Vargas — Full-Stack Developer & Automation
-https://felipevargas.vercel.app/
+# Felipe Vargas Arias — Full-Stack Engineer & Automation Specialist
+Website: https://felipevargas.vercel.app/
+LinkedIn: https://www.linkedin.com/in/felipevargasarias/
+GitHub: https://github.com/JonathanVargas0111
+Twitter/X: https://twitter.com/felipevargasx_
+Personal Lab: https://nandark.com/
 
-Summary
-Ingeniero de Sistemas y Desarrollador Full-Stack. Construyo experiencias web, ecommerce y automatizaciones con foco en performance, SEO y conversion.
+## Summary
+Systems Engineer (UNIMINUTO) and Full-Stack Developer with ~2,500 commits across 11 production codebases for Australian digital agency Web Stark. Specializing in Next.js 15 App Router, React 19, TypeScript, enterprise WooCommerce plugin development, Model Context Protocol (MCP), and Answer Engine Optimization (AEO/GEO).
 
-Services
-- Desarrollo web (Next.js, React, TypeScript)
-- Ecommerce (WordPress, WooCommerce)
-- Automatizacion y workflows con IA
-- SEO tecnico y performance
+## Core Technical Competencies
+- **Frontend:** Next.js 15, React 19, TypeScript, Tailwind CSS 4, SCSS, Framer Motion, MDX, Velite.
+- **Backend & CMS:** PHP 8.2+, WordPress Custom Plugin Architecture, WooCommerce Core Customization, WHMCS API, Node.js, GraphQL, MySQL.
+- **AI & Automation:** Model Context Protocol (MCP) Servers, Claude Code Skills & Agents, Python Automation (Trafilatura), AEO/GEO Search Optimization.
+- **DevOps & Performance:** Docker, Docker Compose, Vercel, Core Web Vitals (Sub-second LCP, zero CLS), Jest Testing, Security Hardening (SEC-1..12).
 
-Projects
-- Nandark (servicios de desarrollo y automatizacion): https://nandark.com/
-- Johanna Skincare (cliente): https://johanna-skincare.vercel.app/
-- TechHub (demo): https://techhub-alpha.vercel.app/
-- WebStark (agencia): https://webstark.com.au/
+## Key Production Systems & Architectures
 
-Profiles
-- LinkedIn: https://www.linkedin.com/in/felipevargasarias/
-- GitHub: https://github.com/JonathanVargas0111
-- X: https://twitter.com/felipevargasx_
+### 1. Food4Fitness (Engineered at Web Stark — Company Project)
+- **Role:** Lead Full-Stack Plugin Engineer (at Web Stark) | 1,596 commits
+- **Stack:** PHP 8.2, WordPress, WooCommerce, JavaScript, SCSS, Jest, Google Maps API, Routific API
+- **Key Deliverables:** Reactive Custom Meal Builder with dynamic gram-to-macro nutrition calculations; multi-zone delivery engine with state holiday cutoffs; post-purchase order modification system; migrated 27 legacy systems.
+
+### 2. WebStark.com.au (Engineered at Web Stark — Company Project)
+- **Role:** Lead Frontend Engineer (at Web Stark) | 349 commits
+- **Stack:** Next.js 15, React 19, TypeScript, Tailwind CSS, WordPress WPGraphQL, Critters (Critical CSS)
+- **Key Deliverables:** Headless corporate architecture generating 100+ dynamic service/case study pages; sub-second LCP and zero CLS optimization; interactive portfolio with URL-synced filters; Gravity Forms API integration.
+
+### 3. MX Modules & MX Proposals (Engineered at Web Stark — Company Project)
+- **Role:** Full-Stack & Systems Developer (at Web Stark) | 362 commits
+- **Stack:** PHP 8.2, WHMCS API, Next.js 15, Velite, MDX, Smarty, MySQL
+- **Key Deliverables:** Commercial WHMCS addon with e-signatures, milestone payment plans, PDF generation, SEC-1..12 security hardening; Velite/MDX marketing blog with 97%+ AEO score.
+
+### 4. WHMCS Modular Docker & Metrics (Engineered at Web Stark — Company Tool)
+- **Role:** DevOps & Backend Engineer (at Web Stark) | 87 commits
+- **Stack:** Docker, Docker Compose, PHP 8.2, MySQL, Apache, WHMCS
+- **Key Deliverables:** Containerized development environment with bind-mount hot reloading; 5 real-time financial KPI dashboard widgets (MRR, churn risk, cost overrides).
+
+### 5. AI SEO Audit Engine & MCP Server (Engineered at Web Stark — Company Tool)
+- **Role:** AI & Automation Developer (at Web Stark) | 83 commits
+- **Stack:** Python, Trafilatura, Model Context Protocol (MCP), Claude Code Skills
+- **Key Deliverables:** 6-Phase automated technical SEO audit pipeline; custom MCP server bridging WHMCS databases to Claude Desktop.
+
+### 6. Nandark Lab & Publication (Personal Project by Felipe Vargas)
+- **Role:** Founder & Creator | https://nandark.com
+- **Key Deliverables:** 39+ published technical deep dives on SEO, AI indexing, and Web Vitals; custom online SEO & AEO Validators; YouTube Transcript AI Summarizer browser extension (Manifest V3 + Ollama local AI).
+
+## Education & Certifications
+- **B.S. in Systems Engineering (Ingeniería de Sistemas):** UNIMINUTO (2017–2022)
+- **Advanced Full Stack Web Development (Microservices & NestJS):** Talent Tech Bogotá (2024)
+- **AWS Cloud Foundations:** Universidad Santo Tomás (2022)
+- **Intermediate Frontend Development:** Universidad Distrital (2023)
+- **Full Stack Diploma (Misión TIC 2022):** Universidad El Bosque (2021)

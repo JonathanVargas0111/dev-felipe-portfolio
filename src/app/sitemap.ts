@@ -1,19 +1,30 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { projectsData } from '../data/projectsData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://felipevargas.vercel.app"
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://felipevargas.vercel.app';
 
-  const staticPages = [
-    "",
-    "/projects",
-  ]
+  const staticPages: MetadataRoute.Sitemap = [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/projects`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+  ];
 
-  const sitemapEntries: MetadataRoute.Sitemap = staticPages.map((page) => ({
-    url: `${baseUrl}${page}`,
+  const projectPages: MetadataRoute.Sitemap = projectsData.map((project) => ({
+    url: `${baseUrl}/projects/${project.id}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: page === "" ? 1.0 : 0.8,
-  }))
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
 
-  return sitemapEntries
+  return [...staticPages, ...projectPages];
 }

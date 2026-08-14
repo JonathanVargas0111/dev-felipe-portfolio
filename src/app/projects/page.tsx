@@ -1,156 +1,168 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
-import { BsArrowLeft } from "react-icons/bs";
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { projectsData } from '../../data/projectsData';
+import { 
+  ArrowLeft, 
+  ExternalLink, 
+  Building2, 
+  Cpu, 
+  Lock, 
+  Layers, 
+  ArrowRight 
+} from 'lucide-react';
+import { FaGithub } from 'react-icons/fa6';
 
 export const metadata: Metadata = {
-    title: "Proyectos | Felipe Vargas - Desarrollador Full Stack",
-    description: "Explora todos los proyectos de desarrollo web de Felipe Vargas. Aplicaciones modernas construidas con React, Next.js y tecnologías de vanguardia.",
+  title: 'Proyectos & Arquitecturas | Felipe Vargas - Full-Stack Developer',
+  description: 'Explora los proyectos en producción, arquitecturas headless y sistemas desarrollados por Felipe Vargas, incluyendo contribuciones clave en Web Stark y proyectos en Nandark Lab.',
 };
 
-// Same projects data as in [slug]/page.tsx - consider moving to a shared data file
-const projects = [
-    {
-        id: "cristian-parra",
-        title: "Cristian Parra",
-        description: "Desarrollo de tienda en línea con WordPress y WooCommerce, implementando un filtro de productos personalizado con jQuery.",
-        technologies: ["Next.js", "JavaScript", "Tailwind CSS", "Framer Motion"],
-        image: "/img/portfolio/portfolio-cristian-desktop.png",
-        year: "2024",
-        category: "E-commerce",
-    },
-    {
-        id: "the-trickest",
-        title: "The Trickest",
-        description: "Plataforma innovadora para salud dietética con blog multi-autor y funcionalidades de ecommerce.",
-        technologies: ["Next.js", "JavaScript", "Tailwind CSS"],
-        image: "/img/portfolio/the-trickets.png",
-        year: "2024",
-        category: "Web Platform",
-    },
-    {
-        id: "ask-and-create",
-        title: "Ask and Create",
-        description: "Desarrollo de sitio web empresarial responsivo con animaciones personalizadas en jQuery.",
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "NextUI"],
-        image: "/img/portfolio/ask-and-create.png",
-        year: "2024",
-        category: "Corporate Website",
-    },
-    {
-        id: "retos-frontend-mentor",
-        title: "Retos Frontend Mentor",
-        description: "Aplicación de rifa con Next.js y Tailwind CSS, donde los usuarios pueden comprar boletos y un ganador es seleccionado aleatoriamente.",
-        technologies: ["HTML", "CSS", "JavaScript"],
-        image: "/img/portfolio/retos-front-end.png",
-        year: "2023",
-        category: "Frontend Challenges",
-    }
-];
-
 export default function ProjectsPage() {
-    return (
-        <main className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white">
-            {/* Header */}
-            <header className="border-b border-gray-200 dark:border-gray-800">
-                <div className="max-w-6xl mx-auto px-4 py-6">
-                    <Link
-                        href="/"
-                        className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors mb-4"
-                    >
-                        <BsArrowLeft />
-                        Volver al inicio
-                    </Link>
-                </div>
-            </header>
+  return (
+    <main className="min-h-screen bg-slate-50 dark:bg-dark-950 text-slate-900 dark:text-slate-100 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        {/* Back Link */}
+        <div>
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-xs font-mono font-semibold text-cyan-600 dark:text-cyan-400 hover:underline"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Volver al inicio</span>
+          </Link>
+        </div>
 
-            <div className="max-w-6xl mx-auto px-4 py-12">
-                {/* Page Header */}
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                        Mis Proyectos
-                    </h1>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Una colección de proyectos que demuestran mi experiencia en desarrollo web full-stack,
-                        desde aplicaciones de e-commerce hasta plataformas corporativas complejas.
+        {/* Page Title & Intro */}
+        <div className="space-y-4 max-w-3xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 dark:text-cyan-400 text-xs font-mono font-semibold">
+            <Layers className="w-3.5 h-3.5" />
+            <span>Índice Completo de Proyectos</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Proyectos, Arquitecturas & Casos de Producción
+          </h1>
+
+          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            Una colección detallada de sistemas construidos para entornos comerciales, plataformas SaaS, plugins de WooCommerce y herramientas de desarrollo.
+          </p>
+        </div>
+
+        {/* Company Attribution Notice */}
+        <div className="p-5 rounded-2xl border border-amber-500/30 bg-amber-500/[0.06] dark:bg-amber-500/[0.04] text-xs text-amber-900 dark:text-amber-200 flex items-start gap-3">
+          <Building2 className="w-5 h-5 flex-shrink-0 text-amber-600 dark:text-amber-400 mt-0.5" />
+          <p className="leading-relaxed">
+            <strong>Nota de Propiedad Intelectual:</strong> Los proyectos identificados con la etiqueta <em>Web Stark</em> corresponden a plataformas y productos propiedad de la agencia australiana <strong>Web Stark</strong> y sus respectivos clientes. En este portafolio se detallan el rol, la arquitectura y las contribuciones técnicas directas realizadas por Felipe Vargas.
+          </p>
+        </div>
+
+        {/* Grid of Projects */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {projectsData.map((project) => {
+            const isWebStark = project.category === 'webstark';
+
+            return (
+              <div
+                key={project.id}
+                className="flex flex-col justify-between rounded-3xl border border-slate-200/80 dark:border-white/[0.08] bg-white dark:bg-dark-900 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-slate-300 dark:hover:border-white/[0.18] transition-all duration-300 space-y-6"
+              >
+                <div className="space-y-4">
+                  {/* Badge */}
+                  <div className="flex items-center justify-between">
+                    {isWebStark ? (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/10 text-[11px] font-semibold text-amber-700 dark:text-amber-300 border border-amber-500/20">
+                        <Building2 className="w-3.5 h-3.5" />
+                        Web Stark
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-cyan-500/10 text-[11px] font-semibold text-cyan-700 dark:text-cyan-300 border border-cyan-500/20">
+                        <Cpu className="w-3.5 h-3.5" />
+                        Personal / Lab
+                      </span>
+                    )}
+
+                    <span className="text-[11px] font-mono text-slate-400">
+                      {project.period || project.year}
+                    </span>
+                  </div>
+
+                  {/* Title & Subtitle */}
+                  <div>
+                    <h2 className="text-xl font-bold text-slate-900 dark:text-white">
+                      {project.title}
+                    </h2>
+                    <p className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
+                      {project.subtitle}
                     </p>
-                </div>
+                  </div>
 
-                {/* Projects Grid */}
-                <div className="grid md:grid-cols-2 gap-8 mb-16">
-                    {projects.map((project) => (
-                        <Link
-                            key={project.id}
-                            href={`/projects/${project.id}`}
-                            className="group block bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-800"
-                        >
-                            {/* Project Image */}
-                            <div className="relative aspect-video overflow-hidden">
-                                <Image
-                                    src={project.image}
-                                    alt={project.title}
-                                    fill
-                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                    loading="lazy"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                            </div>
+                  {/* Overview */}
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-3">
+                    {project.overview.es}
+                  </p>
 
-                            {/* Project Content */}
-                            <div className="p-6">
-                                <div className="flex items-center gap-3 mb-3">
-                                    <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">
-                                        {project.category}
-                                    </span>
-                                    <span className="text-sm text-gray-500 dark:text-gray-400">
-                                        {project.year}
-                                    </span>
-                                </div>
-
-                                <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                                    {project.title}
-                                </h3>
-
-                                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
-                                    {project.description}
-                                </p>
-
-                                {/* Tech Stack */}
-                                <div className="flex flex-wrap gap-2">
-                                    {project.technologies.slice(0, 3).map((tech, i) => (
-                                        <span
-                                            key={i}
-                                            className="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                    {project.technologies.length > 3 && (
-                                        <span className="px-3 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
-                                            +{project.technologies.length - 3} más
-                                        </span>
-                                    )}
-                                </div>
-                            </div>
-                        </Link>
+                  {/* Metrics */}
+                  <div className="grid grid-cols-2 gap-2 pt-2">
+                    {project.metrics.slice(0, 2).map((m) => (
+                      <div key={m.label} className="p-2.5 rounded-xl bg-slate-50 dark:bg-dark-850 border border-slate-200/60 dark:border-white/[0.04]">
+                        <div className="text-sm font-bold font-mono text-cyan-600 dark:text-cyan-400">
+                          {m.value}
+                        </div>
+                        <div className="text-[10px] text-slate-500 dark:text-slate-400 truncate">
+                          {m.label}
+                        </div>
+                      </div>
                     ))}
+                  </div>
+
+                  {/* Tech stack */}
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {project.technologies.slice(0, 4).map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-dark-850 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/[0.06] text-[11px] font-mono"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Call to Action */}
-                <div className="text-center bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl p-8">
-                    <h2 className="text-2xl font-bold mb-4">¿Tienes un proyecto en mente?</h2>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6">
-                        Me encantaría ayudarte a convertir tus ideas en realidad.
-                        Contactemos y conversemos sobre tu próximo proyecto.
-                    </p>
-                    <Link
-                        href="/#section-contact"
-                        className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                {/* Footer action */}
+                <div className="pt-4 border-t border-slate-100 dark:border-white/[0.06] flex items-center justify-between">
+                  <Link
+                    href={`/projects/${project.id}`}
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-cyan-600 dark:text-cyan-400 hover:underline"
+                  >
+                    <span>Ver caso detallado</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+
+                  {project.links.live && (
+                    <a
+                      href={project.links.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-1.5 text-slate-500 hover:text-cyan-500"
                     >
-                        Iniciar Conversación
-                    </Link>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  )}
+
+                  {project.links.isPrivate && (
+                    <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1">
+                      <Lock className="w-3 h-3" /> Privado
+                    </span>
+                  )}
                 </div>
-            </div>
-        </main>
-    );
+
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+    </main>
+  );
 }
